@@ -7,7 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../config/base/laptop.nix
-    ../../config/de/plasma.nix
+    ../../config/de/plasma/env.nix
     ../../config/packages/bluetooth.nix
     ../../config/packages/firefox.nix
     ../../config/packages/gaming.nix

@@ -8,9 +8,13 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
     nixosConfigurations = {
 
       # Beelink PC
@@ -34,6 +38,9 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.ty = import ./hosts/nix13/home.nix;
+            # I'm using plasma on this system, so use plasma-manager to configure it
+            # I import the actual plasma-manager config options in the above home.nix
+            home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
           }
         ];
       };

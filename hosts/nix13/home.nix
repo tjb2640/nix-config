@@ -5,6 +5,7 @@
 
   imports = [
     ../../config/home-common/ty.nix
+    ../../config/home-common/module/plasma-manager.nix
   ];
 
   programs.zsh.shellAliases = {

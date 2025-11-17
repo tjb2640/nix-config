@@ -1,5 +1,5 @@
 # user: ty, system: minilink
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
 

@@ -7,7 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../config/base/desktop.nix
-    ../../config/de/plasma.nix
+    ../../config/de/plasma/env.nix
     ../../config/packages/firefox.nix
   ];
 
