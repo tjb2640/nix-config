@@ -13,7 +13,7 @@
     ../../config/packages/gaming.nix
   ];
 
-  boot.initrd.luks.devices."luks-ed8dffb9-5047-4119-8abf-2099653adb25".device = "/dev/disk/by-uuid/ed8dffb9-5047-4119-8abf-2099653adb25";
+  boot.initrd.luks.devices."luks-fa0277a9-062a-4b4c-b011-092fc1815abf".device = "/dev/disk/by-uuid/fa0277a9-062a-4b4c-b011-092fc1815abf";
   networking.hostName = "nix13";
 
   system.stateVersion = "25.05";
