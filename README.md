@@ -7,8 +7,6 @@ Right now it's pretty basic and I'm still working on it,
 but it seems to be coming along at a nice pace.
 
 ## TODO list
-- System configuration for X13 gen 3 laptop
-- Make `nixmini` headless
 - Whittle down or add new configuration options
 - Shell config for [Winesweeper](https://github.com/tjb2640/winesweeper)
 - ??? TBA
