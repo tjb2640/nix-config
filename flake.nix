@@ -40,7 +40,7 @@
             home-manager.users.ty = import ./hosts/nix13/home.nix;
             # I'm using plasma on this system, so use plasma-manager to configure it
             # I import the actual plasma-manager config options in the above home.nix
-            home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+            home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
           }
         ];
       };

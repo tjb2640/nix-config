@@ -3,21 +3,21 @@
 # Configure plasma-manager to declare the plasma 6 install
 
 {
-  programs.plasma.plasmaManager = {
+  programs.plasma = {
     enable = true;
     overrideConfig = true;
 
-    # all KDE settings
-    appearance = {
-      colors = {
-        theme = "Breeze Dark";
+    session = {
+      general = {
+        askForConfirmationOnLogout = false;
+      };
+      sessionRestore = {
+        restoreOpenApplicationsOnLogin = "startWithEmptySession";
       };
     };
 
-    config = {
-      shortcuts = {
-        "Ctrl+Alt+T" = "alacritty";
-      };
+    workspace = {
+      lookAndFeel = "org.kde.breezedark.desktop";
     };
   };
 }
