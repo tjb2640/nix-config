@@ -17,19 +17,7 @@
   outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
     nixosConfigurations = {
 
-      # Beelink PC
-      nixmini = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/nixmini/configuration.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.ty = import ./hosts/nixmini/home.nix;
-          }
-        ];
-      };
-
+      # Thinkpad X13 gen 3 (AMD)
       nix13 = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
