@@ -116,6 +116,22 @@
     };
   };
 
+  programs.plasma = {
+    kwin = {
+      # Adjust position of title bar buttons
+      titlebarButtons = {
+        left = [
+          "close"
+          "minimize"
+          "maximize"
+        ];
+        right = [
+          "shade"
+        ];
+      };
+    };
+  };
+
   programs.zsh = {
     enable = true;
     shellAliases = {
