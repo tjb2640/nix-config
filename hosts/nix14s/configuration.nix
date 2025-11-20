@@ -21,8 +21,8 @@
     prime = {
       sync.enable = true;
       # sudo lshw -c display
-      intelBusId = "PCI:00:02:0";
-      nvidiaBusId = "PCI:2d:00:0";
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:45:0:0";
     };
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
