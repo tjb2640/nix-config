@@ -10,6 +10,10 @@
   #   SYSTEM & SERVICES
   # ###########################################################
 
+  # Enable these in case they are not already
+  hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
+
   services.openssh.enable = lib.mkForce false;
   services.pipewire = {
     enable = lib.mkForce true;

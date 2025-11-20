@@ -44,6 +44,7 @@
     glib
     glibc
     libgcc
+    lshw # useful for discovering bus id values
     vim
     wget
   ];

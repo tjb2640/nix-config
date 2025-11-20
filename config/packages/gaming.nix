@@ -4,10 +4,6 @@
 
 {
 
-  # Enable these in case they are not already
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true;
-
   # Enables some temporary performance tweaks when run
   programs.gamemode.enable = true;
 
