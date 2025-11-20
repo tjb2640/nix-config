@@ -33,6 +33,23 @@
         ];
       };
 
+      # Thinkpad P14s (nvidia, intel :( )
+      # This looks a lot like nix13 (above) but with additional nvidia stuff
+      nix14s = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/nix14s/configuration.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.ty = import ./hosts/nix14s/home.nix;
+            # I'm using plasma on this system, so use plasma-manager to configure it
+            # I import the actual plasma-manager config options in the above home.nix
+            home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+          }
+        ];
+      };
+
     };
   };
 
