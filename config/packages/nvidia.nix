@@ -36,5 +36,6 @@
     };
     open = false;
     nvidiaSettings = true;
-  }
+  };
+
 }
