@@ -7,6 +7,8 @@ Right now it's pretty basic and I'm still working on it,
 but it seems to be coming along at a nice pace.
 
 Interesting stuff is in `config/` and my `hosts/nix13` host.
+Nvidia configuration is in `config/programs/nvidia.nix`
+and host config for `hosts/nix14s/configuration.nix`.
 
 ## TODO list
 - Whittle down or add new configuration options
