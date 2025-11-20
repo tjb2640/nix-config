@@ -49,7 +49,7 @@
           white = "#fdf6e3";
         };
       };
-      font.size = 9;
+      font.size = 11;
       terminal.shell.program = "zsh";
     };
   };

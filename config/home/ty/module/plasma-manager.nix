@@ -16,7 +16,7 @@
         name = "Kensington Expert Mouse";
         productId = "1020";
         vendorId = "0111";
-        acceleration = -0.2;
+        acceleration = -0.5;
       }
     ];
 
@@ -59,18 +59,6 @@
                 verticalAlignment = "center";
               };
               overrideForMaximized.enable = false;
-              titleReplacements = [
-                {
-                  type = "regexp";
-                  originalTitle = ''\\bAlacritty\\b'';
-                  newTitle = "Terminal";
-                }
-                {
-                  type = "regexp";
-                  originalTitle = ''\\bDolphin\\b'';
-                  newTitle = "File manager";
-                }
-              ];
               windowTitle = {
                 hideEmptyTitle = true;
                 source = "appName";
