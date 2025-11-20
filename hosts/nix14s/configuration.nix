@@ -17,18 +17,17 @@
 
   # System-specific NVidia options
   # https://nixos.wiki/wiki/Nvidia
-  # TODO: first install on p14s then fill these in and test.
-#  hardware.nvidia = {
-#    prime = {
-#      sync.enable = true;
-#      # sudo lshw -c display
-#      intelBusId = "TBD";
-#      nvidiaBusId = "TBD";
-#    };
-#    package = config.boot.kernelPackages.nvidiaPackages.stable;
-#  };
+  hardware.nvidia = {
+    prime = {
+      sync.enable = true;
+      # sudo lshw -c display
+      intelBusId = "PCI:00:02:0";
+      nvidiaBusId = "PCI:2d:00:0";
+    };
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 
-  # TODO: boot.initrd.luks.devices
+  boot.initrd.luks.devices."luks-13d2ad5e-9021-4597-a2bf-ea0479eda9a6".device = "/dev/disk/by-uuid/13d2ad5e-9021-4597-a2bf-ea0479eda9a6";
   networking.hostName = "nix14s";
 
   system.stateVersion = "25.05";
