@@ -4,7 +4,16 @@
 
 {
 
+  # ###########################################################
+  #   OVERLAYS
+  # ###########################################################
   imports = [ ./base.nix ];
+  nixpkgs.overlays = [
+    # Fonts: SF & NY
+    (final: prev: rec {
+      apple-fonts = final.callPackage ../../modules/font/apple-fonts/default.nix {};
+    })
+  ];
 
   # ###########################################################
   #   SYSTEM & SERVICES
@@ -31,6 +40,7 @@
   # ###########################################################
 
   users.users.ty.packages = with pkgs; [
+    apple-fonts
     filezilla
     ffmpeg
     gpa # gpg gui
