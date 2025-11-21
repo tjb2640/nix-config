@@ -29,6 +29,13 @@
   services.pulseaudio.enable = false; # always prefer pipewire if anything
   services.xserver.enable = lib.mkDefault false; # this is a Wayland household
 
+  # Run automatic garbage collection for old generations
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    persistent = true;
+  };
+
   # ###########################################################
   #   PROGRAMS
   # ###########################################################
