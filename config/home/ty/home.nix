@@ -9,7 +9,7 @@
   home.homeDirectory = "/home/ty";
 
   # link an icon
-  home.file.".face.icon".source = ./avatar.png;
+  home.file.".face.icon".source = ../../../resource/images/avatar.png;
 
   home.packages = with pkgs; [
     eza # flashy modern ls alternative
