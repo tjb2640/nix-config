@@ -72,10 +72,23 @@
           "org.kde.plasma.appmenu"
           "org.kde.plasma.panelspacer"
           # System tray
+          # ls /run/current-system/sw/share/plasma/plasmoids/
+          # ls /etc/profiles/per-user/ty/share/plasma/plasmoids/
           {
             config = {
-              Appearance = {
-                iconSpacing = "small";
+              General = {
+                hiddenItems = [
+                  "org.kde.plasma.bluetooth"
+                  "org.kde.plasma.clipboard"
+                ];
+                iconSpacing = 1;
+                shownItems = [
+                  "org.kde.plasma.pager"
+                  "org.kde.plasma.weather"
+                  "org.kde.plasma.networkmanagement"
+                  "org.kde.plasma.volume"
+                  "org.kde.plasma.battery"
+                ];
               };
             };
             name = "org.kde.plasma.systemtray";
