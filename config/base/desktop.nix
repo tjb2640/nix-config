@@ -11,7 +11,7 @@
   nixpkgs.overlays = [
     # Fonts: SF & NY
     (final: prev: rec {
-      apple-fonts = final.callPackage ../../modules/font/apple-fonts/default.nix {};
+      apple-fonts = final.callPackage ../../modules/system/font/apple-fonts/default.nix {};
     })
   ];
 
@@ -40,11 +40,13 @@
   # ###########################################################
 
   users.users.ty.packages = with pkgs; [
+    # overlays
     apple-fonts
+    # nixpkgs
     filezilla
     ffmpeg
     gpa # gpg gui
-    inkscape
+    inkscape-with-extensions # load extensions from derivations
     krita
     libreoffice
     media-downloader # Qt yt-dlp
