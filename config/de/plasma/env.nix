@@ -19,11 +19,13 @@
     kdePackages.kdenlive
     kdePackages.kmail
     kdePackages.ksudoku
-    kdePackages.partitionmanager
     kdePackages.powerdevil
     kdePackages.qtstyleplugin-kvantum
     kdePackages.tokodon # mastodon client
     ocs-url # for installing plasma extensions from firefox
   ];
+
+  # needs dbus
+  programs.partition-manager.enable = true;
 
 }
