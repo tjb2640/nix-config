@@ -23,6 +23,7 @@
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
 
+  services.mullvad-vpn.enable = true;
   services.openssh.enable = lib.mkForce false;
   services.pipewire = {
     enable = lib.mkForce true;
