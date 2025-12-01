@@ -22,31 +22,31 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      # solarized dark
+      # custom theme
       colors = {
         primary = {
-          background = "#002b36";
-          foreground = "#839496";
+          background = "#322222";
+          foreground = "#d6beb9";
         };
         normal = {
-          black = "#073642";
-          red = "#dc322f";
-          green = "#859900";
-          yellow = "#b58900";
-          blue = "#268bd2";
-          magenta = "#d33682";
-          cyan = "#2aa198";
-          white = "#eee8d5";
+          black = "#6b6b6b";
+          red = "#a23e2a";
+          green = "#90b542";
+          yellow = "#c5a62f";
+          blue = "#427cb5";
+          magenta = "#8f3da0";
+          cyan = "#48c5c4";
+          white = "#e1cfcb";
         };
         bright = {
-          black = "#002b36";
-          red = "#cb4b16";
-          green = "#586e75";
-          yellow = "#657b83";
-          blue = "#839496";
-          magenta = "#6c71c4";
-          cyan = "#93a1a1";
-          white = "#fdf6e3";
+          black = "#8e8e8e";
+          red = "#b04b37";
+          green = "#b2ce79";
+          yellow = "#dbc367";
+          blue = "#86add2";
+          magenta = "#bc76cd";
+          cyan = "#77dddd";
+          white = "#ece1df";
         };
       };
       font.size = 11;
@@ -78,6 +78,8 @@
         "disk"
         "separator"
         "shell"
+        "separator"
+        "colors"
       ];
     };
   };
