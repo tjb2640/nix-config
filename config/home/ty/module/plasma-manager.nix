@@ -42,6 +42,7 @@
     # Configure some input devices I use across multiple Plasma machines
     # `cat /proc/bus/input/devices` to find this info
     input.mice = [
+      # Kensington Expert Mouse (big trackball thing)
       {
         # note: feels better to adjust acceleration rather than speed with this one
         enable = true;
@@ -49,6 +50,14 @@
         productId = "1020";
         vendorId = "0111";
         acceleration = -0.5;
+      }
+      # USB trackpoint keyboard (rectangle, micro-usb, newer)
+      {
+        enable = true;
+        name = "Lenovo ThinkPad Compact USB Keyboard with TrackPoint";
+        productId = "6047";
+        vendorId = "17ef";
+        acceleration = -0.3;
       }
     ];
 
