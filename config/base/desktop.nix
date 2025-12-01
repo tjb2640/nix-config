@@ -4,10 +4,12 @@
 
 {
 
+  imports = [ ./base.nix ];
+
   # ###########################################################
   #   OVERLAYS
   # ###########################################################
-  imports = [ ./base.nix ];
+  
   nixpkgs.overlays = [
     # Fonts: SF & NY
     (final: prev: rec {
@@ -18,6 +20,10 @@
   # ###########################################################
   #   SYSTEM & SERVICES
   # ###########################################################
+
+  environment.systemPackages = with pkgs; [
+    hack-font
+  ];
 
   # Enable these in case they are not already
   hardware.graphics.enable = true;

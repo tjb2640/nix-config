@@ -10,6 +10,35 @@
     enable = true;
     overrideConfig = true;
 
+    fonts = {
+      fixedWidth = {
+        family = "Hack";
+        pointSize = 10;
+      };
+      general = {
+        family = "Hack";
+        pointSize = 10;
+      };
+      menu = {
+        family = "Hack";
+        pointSize = 10;
+      };
+      small = {
+        family = "Hack";
+        pointSize = 8;
+      };
+      toolbar = {
+        family = "Hack";
+        pointSize = 10;
+      };
+      windowTitle = {
+        family = "Hack";
+        pointSize = 11;
+        style = "oblique";
+        weight = 1000;
+      };
+    };
+
     # Configure some input devices I use across multiple Plasma machines
     # `cat /proc/bus/input/devices` to find this info
     input.mice = [
@@ -72,35 +101,31 @@
           "org.kde.plasma.appmenu"
           "org.kde.plasma.panelspacer"
           # System tray
+          # ** Declarative shown/hidden are broken 29 Nov 2025: https://github.com/nix-community/plasma-manager/issues/535
           # ls /run/current-system/sw/share/plasma/plasmoids/
           # ls /etc/profiles/per-user/ty/share/plasma/plasmoids/
           {
-            config = {
-              General = {
-                hiddenItems = [
-                  "org.kde.plasma.bluetooth"
-                  "org.kde.plasma.clipboard"
-                ];
-                iconSpacing = 1;
-                shownItems = [
+            systemTray = {
+              items = {
+                shown = [
                   "org.kde.plasma.pager"
                   "org.kde.plasma.weather"
                   "org.kde.plasma.networkmanagement"
                   "org.kde.plasma.volume"
                   "org.kde.plasma.battery"
                 ];
+                hidden = [
+                  "org.kde.plasma.bluetooth"
+                  "org.kde.plasma.clipboard"
+                ];
               };
             };
-            name = "org.kde.plasma.systemtray";
           }
           # Clock
           {
-            config = {
-              Appearance = {
-                showDate = false;
-              };
+            digitalClock = {
+              date.enable = false;
             };
-            name = "org.kde.plasma.digitalclock";
           }
         ];
       }
