@@ -137,6 +137,7 @@
     shellAliases = {
       ls = "eza"; # edgy idea
       ll = "eza -l";
+      gomusic = "cd ~/Music/Library";
       gonix = "cd ~/.dotfiles";
       gs = "git status";
     };
