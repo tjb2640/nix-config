@@ -57,7 +57,7 @@
         name = "Lenovo ThinkPad Compact USB Keyboard with TrackPoint";
         productId = "6047";
         vendorId = "17ef";
-        acceleration = -0.3;
+        acceleration = -0.1;
       }
     ];
 
