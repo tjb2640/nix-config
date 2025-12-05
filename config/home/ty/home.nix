@@ -57,8 +57,10 @@
   # Hi, be sure to change this as well... lol
   programs.git = {
     enable = true;
-    userName = "tjb2640";
-    userEmail = "95368581+tjb2640@users.noreply.github.com";
+    settings = {
+      user.email = "95368581+tjb2640@users.noreply.github.com";
+      user.name = "tjb2640";
+    };
   };
 
   programs.fastfetch = {
@@ -96,6 +98,7 @@
       lightness = 0.25;
       mode = "rgb";
       preset = "nonbinary";
+      pride_month_disable = false;
     };
   };
 
@@ -106,14 +109,12 @@
       add_newline = false;
       format = lib.concatStrings [
         "$line_break"
-        "$package"
-        "$line_break"
         "$character"
       ];
       scan_timeout = 10;
       character = {
-        success_symbol = "➜";
-        error_symbol = "➜";
+        success_symbol = "[➜](bold green)";
+        error_symbol = "[x](bold red)";
       };
     };
   };

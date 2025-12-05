@@ -110,7 +110,6 @@
           "org.kde.plasma.appmenu"
           "org.kde.plasma.panelspacer"
           # System tray
-          # ** Declarative shown/hidden are broken 29 Nov 2025: https://github.com/nix-community/plasma-manager/issues/535
           # ls /run/current-system/sw/share/plasma/plasmoids/
           # ls /etc/profiles/per-user/ty/share/plasma/plasmoids/
           {
@@ -134,6 +133,8 @@
           {
             digitalClock = {
               date.enable = false;
+              font.family = "Hack";
+              font.size = 8;
             };
           }
         ];

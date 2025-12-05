@@ -69,7 +69,7 @@
     signal-desktop
     strawberry
     telegram-desktop
-    tor-browser-bundle-bin
+    tor-browser
     ungoogled-chromium
     vesktop # discord
     vlc
