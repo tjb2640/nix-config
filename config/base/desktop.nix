@@ -67,6 +67,7 @@
     qbittorrent
     scrcpy # android device screen interaction
     signal-desktop
+    strawberry
     telegram-desktop
     tor-browser-bundle-bin
     ungoogled-chromium
