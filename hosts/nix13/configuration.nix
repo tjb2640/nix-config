@@ -8,9 +8,9 @@
     ./hardware-configuration.nix
     ../../config/base/laptop.nix
     ../../config/de/plasma/env.nix
-    ../../config/packages/bluetooth.nix
-    ../../config/packages/firefox.nix
-    ../../config/packages/gaming.nix
+    ../../config/extras/bluetooth.nix
+    ../../config/extras/firefox.nix
+    ../../config/extras/gaming.nix
   ];
 
   boot.initrd.luks.devices."luks-fa0277a9-062a-4b4c-b011-092fc1815abf".device = "/dev/disk/by-uuid/fa0277a9-062a-4b4c-b011-092fc1815abf";

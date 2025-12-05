@@ -8,11 +8,11 @@
     ./hardware-configuration.nix
     ../../config/base/laptop.nix
     ../../config/de/plasma/env.nix
-    ../../config/packages/bluetooth.nix
-    ../../config/packages/firefox.nix
-    ../../config/packages/gaming.nix
+    ../../config/extras/bluetooth.nix
+    ../../config/extras/firefox.nix
+    ../../config/extras/gaming.nix
     # this laptop is equipped with a modern quadro card
-    ../../config/packages/nvidia.nix
+    ../../config/extras/nvidia.nix
   ];
 
   # System-specific NVidia options

@@ -5,7 +5,7 @@
 
   imports = [
     ../../config/home/ty/home.nix
-    ../../config/home/ty/module/plasma-manager.nix
+    ../../config/home/ty/plasma-manager.nix
   ];
 
   # Device-specific things go here!

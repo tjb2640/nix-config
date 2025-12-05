@@ -190,7 +190,7 @@
     };
 
     workspace = {
-      lookAndFeel = "org.kde.breezedark.desktop";
+      # lookAndFeel = "org.kde.breezedark.desktop";
       wallpaper = /home/ty/.dotfiles/resource/wallpapers/36claremont.jpg;
     };
   };
