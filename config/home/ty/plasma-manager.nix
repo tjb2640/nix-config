@@ -162,6 +162,7 @@
                   "applications:mullvad-vpn.desktop"
                   "applications:firefox.desktop"
                   "applications:media-downloader.desktop"
+                  "applications:org.strawberrymusicplayer.strawberry.desktop"
                   "applications:org.kde.kmail2.desktop"
                   "applications:org.telegram.desktop.desktop"
                   "applications:signal.desktop"
@@ -190,7 +191,7 @@
     };
 
     workspace = {
-      # lookAndFeel = "org.kde.breezedark.desktop";
+      lookAndFeel = "org.kde.breezedark.desktop";
       wallpaper = /home/ty/.dotfiles/resource/wallpapers/36claremont.jpg;
     };
   };
