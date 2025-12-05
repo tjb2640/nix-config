@@ -4,7 +4,7 @@
 
 {
   # link an icon
-  home.file.".face.icon".source = ../../../../resource/images/avatar.png;
+  home.file.".face.icon".source = ../../../resource/images/avatar.png;
 
   programs.plasma = {
     enable = true;
