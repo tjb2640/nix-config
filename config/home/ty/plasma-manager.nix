@@ -67,6 +67,12 @@
       };
     };
 
+    kwin = {
+      effects = {
+        wobblyWindows.enable = true;
+      };
+    };
+
     # My panel setup
     # Useful: https://develop.kde.org/docs/plasma/scripting/keys/
     panels = [
@@ -192,7 +198,10 @@
     };
 
     workspace = {
-      lookAndFeel = "org.kde.breezedark.desktop";
+      # plasma-apply-colorscheme --list-schemes
+      colorScheme = "ClaremontDark";
+      # plasma-apply-desktoptheme --list-themes
+      lookAndFeel = "ClaremontDark";
       wallpaper = /home/ty/.dotfiles/resource/wallpapers/36claremont.jpg;
     };
   };

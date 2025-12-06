@@ -5,6 +5,13 @@
 
 {
 
+  nixpkgs.overlays = [
+    # My panel and colour scheme
+    (final: prev: rec {
+      plasma-theme-claremont = final.callPackage ../../../overlays/system/plasmatheme/claremont/default.nix {};
+    })
+  ];
+
   # Using SDDM and Plasma 6
   services.desktopManager.plasma6.enable = true;
   services.displayManager.sddm = {
@@ -14,6 +21,7 @@
   };
 
   users.users.ty.packages = with pkgs; [
+    plasma-theme-claremont
     kdePackages.kate
     kdePackages.kcalc
     kdePackages.kdenlive
