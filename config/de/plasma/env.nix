@@ -8,7 +8,11 @@
   nixpkgs.overlays = [
     # My panel and colour scheme
     (final: prev: rec {
-      plasma-theme-claremont = final.callPackage ../../../overlays/system/plasmatheme/claremont/default.nix {};
+      plasma-theme-claremont = final.callPackage ../../../overlays/system/plasmatheme/claremont/desktoptheme/default.nix {};
+    })
+    # Window decorations (aurorae)
+    (final: prev: rec {
+      aurorae-theme-claremont = final.callPackage ../../../overlays/system/plasmatheme/claremont/aurorae/default.nix {};
     })
   ];
 
@@ -22,6 +26,7 @@
 
   users.users.ty.packages = with pkgs; [
     plasma-theme-claremont
+    aurorae-theme-claremont
     kdePackages.kate
     kdePackages.kcalc
     kdePackages.kdenlive

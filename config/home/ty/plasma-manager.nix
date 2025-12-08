@@ -203,6 +203,11 @@
       # plasma-apply-desktoptheme --list-themes
       lookAndFeel = "ClaremontDark";
       wallpaper = /home/ty/.dotfiles/resource/wallpapers/36claremont.jpg;
+      # Need to imperatively set these then inspect ~/.config/kwinrc to get their values:
+      windowDecorations = {
+        library="org.kde.kwin.aurorae";
+        theme="__aurorae__svg__ClaremontDark";
+      };
     };
   };
 
