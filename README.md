@@ -3,17 +3,17 @@
 ![Alt text](resource/images/nixos_256.png)
 
 This is my personal [NixOS](https://nixos.org/) configuration.
-Right now it's pretty basic and I'm still working on it,
-but it seems to be coming along at a nice pace.
+
+NixOS is a declarative operating system wrapped around the Nix package manager.
+Instead of imperatively installing supplemental programs and packages with a pacakge manager like `apt` or `pacman`,
+everything is managed from within this set of config files and the system is rebuilt when new things are added.
 
 Interesting stuff is in `config/` and my `hosts/nix13` host.
-Nvidia configuration is in `config/programs/nvidia.nix`
-and host config for `hosts/nix14s/configuration.nix`.
+A configuration for Nvidia cards is in `config/programs/nvidia.nix`
+and the host-specific config for `hosts/nix14s/configuration.nix`.
 
 ## TODO list
 - Whittle down or add new configuration options
-- Shell config for [Winesweeper](https://github.com/tjb2640/winesweeper)
-- Continue configuring/styling Plasma
 - ??? TBA
 
 ## Cool reference
