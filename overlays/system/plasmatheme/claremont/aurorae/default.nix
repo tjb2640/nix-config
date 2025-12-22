@@ -4,11 +4,11 @@
 
 stdenv.mkDerivation rec {
   pname = "aurorae-theme-claremont";
-  version = "2025.12.7.0";
+  version = "2025.12.22.0";
 
   claremontAurorae = fetchurl {
-    url = "https://github.com/tjb2640/plasma6-claremont-aurorae/archive/refs/tags/v1.0.0.zip";
-    sha256 = "sha256-guPTtxcP3ITWwWa/tLhjjMZLNfmknQ6T/iwuR6VXc10=";
+    url = "https://github.com/tjb2640/plasma6-claremont-aurorae/archive/refs/tags/v1.0.1.zip";
+    sha256 = "sha256-7xDAPG+5evla15m706naIX2Cc3mHOkg9LHvaNYZNz2Q=";
   };
 
   nativeBuildInputs = [ unzip ];
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
     mkdir -p $out/colourfiles
     mkdir -p $out/themefiles
     unzip ${claremontAurorae}
-    mv plasma6-claremont-aurorae-1.0.0/* $out/themefiles/
+    mv plasma6-claremont-aurorae-1.0.1/* $out/themefiles/
   '';
 
   installPhase = ''
