@@ -50,27 +50,17 @@
     # overlays
     apple-fonts
     # nixpkgs
-    filezilla
     ffmpeg
-    gpa # gpg gui
     inkscape-with-extensions # load extensions from derivations
     krita
     libreoffice
     media-downloader # Qt yt-dlp
-    monero-gui
     mullvad-vpn
-    obs-studio
-    obsidian
-    openttd
-    overskride # bluetooth frontend, in lieu of emabling blueman
-    postman
     qbittorrent
     scrcpy # android device screen interaction
     signal-desktop
     strawberry
     telegram-desktop
-    tor-browser
-    ungoogled-chromium
     vesktop # discord
     vlc
     vscodium

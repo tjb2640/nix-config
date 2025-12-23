@@ -23,8 +23,6 @@
     noCheck = true;
   };
 
-  # I have overskride in ./common-desktop.nix, which is a DE-agnostic BT management frontend.
-  # Alternatively, NixOS makes blueman available like this:
-#  services.blueman.enable = true;
+  services.blueman.enable = true;
 
 }
