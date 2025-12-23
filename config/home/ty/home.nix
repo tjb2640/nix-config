@@ -128,9 +128,7 @@
           "minimize"
           "maximize"
         ];
-        right = [
-          "shade"
-        ];
+        right = [];
       };
     };
   };
