@@ -31,6 +31,7 @@
     kdePackages.kcalc
     kdePackages.kdenlive
     kdePackages.kmail
+    kdePackages.kmail-account-wizard
     kdePackages.ksudoku
     kdePackages.powerdevil
     kdePackages.qtstyleplugin-kvantum
