@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>start page</title>
+        <meta charset="utf-8" />
+        <style type="text/css">
+            /* Start custom CSS (house all in one file) */
+
+            body {
+                background: rgb(34, 19, 19);
+                color: rgb(255, 255, 255);
+                font-family: monospace;
+                font-size: 1.5em;
+            }
+
+            h1, .box {
+                max-width: 300px;
+                width: 50vw;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                font-weight: 200;
+                text-align: left;
+            }
+
+            .box {
+                clip-path: polygon(0.75em 0, 100% 0, calc(100% - 0.75em) 100%, 0 100%);
+                color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: row;
+                line-height: 1em;
+                margin-bottom: 0.5em;
+            }
+
+            .box a {
+                color: inherit;
+                flex: 1;
+                padding: 0.5em;
+                text-decoration: none;
+            }
+
+            .box a > span {
+                font-size: 1.25em;
+                padding: 0.5em;
+            }
+
+            .box-red {
+                background-color: rgb(162, 62, 42);
+            }
+
+            .box-green {
+                background-color: rgb(144, 181, 66);
+                color: rgb(20, 20, 20);
+            }
+
+            .box-blue {
+                background-color: rgb(66, 124, 181);
+            }
+
+            .box-yellow {
+                background-color: rgb(197, 166, 47);
+                color: rgb(20, 20, 20);
+            }
+
+            .box-orange {
+                background-color: rgb(197, 127, 47);
+                color: rgb(20, 20, 20);
+            }
+
+            .box-purple {
+                background-color: rgb(143, 61, 160);
+                color: rgb(20, 20, 20);
+            }
+
+            .box-white {
+                background-color: rgb(225, 207, 203);
+                color: rgb(20, 20, 20);
+            }
+
+            .container {
+                align-items: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 1em;
+            }
+            /* End custom CSS */
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Start</h1>
+            <div class="box box-red">
+                <a href="https://ddg.gg"><span>🦆</span>ddg.gg</a>
+            </div>
+            <div class="box box-green">
+                <a href="https://neocities.org/"><span>🖥️</span>Neocities</a>
+            </div>
+            <div class="box box-blue">
+                <a href="https://www.thestar.com"><span>🍁</span>The Star</a>
+            </div>
+            <div class="box box-yellow">
+                <a href="https://webmail.migadu.com/#/mailbox/INBOX"><span>📧</span>Migadu Webmail</a>
+            </div>
+            <div class="box box-purple">
+                <a href="https://mail.proton.me/u/0/inbox"><span>📧</span>Proton Inbox</a>
+            </div>
+            <h1>RTFM</h1>
+            <div class="box box-blue">
+                <a href="https://search.nixos.org/options"><span>❄️</span>NixOS</a>
+            </div>
+            <div class="box box-white">
+                <a href="https://home-manager-options.extranix.com/"><span>🏡</span>Home Manager</a>
+            </div>
+            <div class="box box-orange">
+                <a href="https://nix-community.github.io/plasma-manager/options.xhtml"><span>🗔</span>Plasma Manager</a>
+            </div>
+        </div>
+    </body>
+</html>

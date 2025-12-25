@@ -12,7 +12,7 @@
 
     preferences = {
       "browser.contentblocking.category" = "standard";
-      "browser.startup.homepage" = "https://ddg.gg/";
+      "browser.startup.homepage" = "file:///home/ty/.dotfiles/resource/pages/browserstart/index.html";
       "intl.locale.requested" = "en-CA,en-GB,en-US";
       "intl.regional_prefs.use_os_locales" = true;
       "media.eme.enabled" = true; # DRM
