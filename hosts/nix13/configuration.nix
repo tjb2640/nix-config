@@ -11,7 +11,7 @@
     ../../config/extras/bluetooth.nix
     ../../config/extras/firefox.nix
     ../../config/extras/gaming.nix
-    ../../config/extras/slop.nix
+    ../../config/extras/plymouth/firsttheme.nix
   ];
 
   boot.initrd.luks.devices."luks-fa0277a9-062a-4b4c-b011-092fc1815abf".device = "/dev/disk/by-uuid/fa0277a9-062a-4b4c-b011-092fc1815abf";
