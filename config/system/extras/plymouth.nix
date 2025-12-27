@@ -3,7 +3,7 @@
 # Testing out plymouth theming 12/25
 
 let 
-  plymouth-theme-rbsys = pkgs.callPackage ../../overlays/system/plymouth/plymouth-theme-rbsys/default.nix {};
+  plymouth-theme-rbsys = pkgs.callPackage ../../../overlays/system/plymouth-theme-rbsys/default.nix {};
 in
 {
 

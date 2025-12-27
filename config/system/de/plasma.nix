@@ -8,11 +8,11 @@
   nixpkgs.overlays = [
     # My panel and colour scheme
     (final: prev: rec {
-      plasma-theme-claremont = final.callPackage ../../../overlays/system/plasmatheme/claremont/desktoptheme/default.nix {};
+      plasma-theme-claremont = final.callPackage ../../../overlays/system/plasma-theme-claremont/desktoptheme/default.nix {};
     })
     # Window decorations (aurorae)
     (final: prev: rec {
-      aurorae-theme-claremont = final.callPackage ../../../overlays/system/plasmatheme/claremont/aurorae/default.nix {};
+      aurorae-theme-claremont = final.callPackage ../../../overlays/system/plasma-theme-claremont/aurorae/default.nix {};
     })
   ];
 

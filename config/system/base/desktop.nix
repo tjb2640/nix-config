@@ -13,7 +13,7 @@
   nixpkgs.overlays = [
     # Fonts: SF & NY
     (final: prev: rec {
-      apple-fonts = final.callPackage ../../overlays/system/font/apple-fonts/default.nix {};
+      apple-fonts = final.callPackage ../../../overlays/system/apple-fonts/default.nix {};
     })
   ];
 
