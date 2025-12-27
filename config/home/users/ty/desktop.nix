@@ -5,10 +5,7 @@
 {
   
   imports = [
-    inputs.zen-browser.homeModules.beta
+    ../../extras/zenbrowser.nix
   ];
-
-  # from the zen-browser community flake
-  programs.zen-browser.enable = true;
 
 }

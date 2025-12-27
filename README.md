@@ -29,14 +29,17 @@ Right now I only have `overlays/system/` overlays.
 - **`hosts/`**: flaked out, specific to each machine.
   - `configuration.nix`: sets hostname and imports from `config/system/` as needed
   - `hardware-configuration.nix`
-  - `home.nix`: machine-specific values for `home-manager` and `plasma-manager`; also imports from `config/home/` as needed
+  - `home/<USERNAME>.nix`: machine-specific values for `home-manager` and `plasma-manager` per user; also imports from `config/home/users/` as needed
 - `config/`: branched-off files included by files in `hosts/`
   - **`home/`**: having to do with home directories and user-specific things. 
+    - `extras/`: additional user-level packages
+      - `zenbrowser.nix`: enables the zen browser and preloads some extensions and settings
+    - `users/<USERNAME>/`: base files, specific to each user
   Imported from `hosts/<HOSTNAME>/home.nix`
-    - `<USERNAME>/base.nix`: home-manager values for all machines
-    - `<USERNAME>/desktop.nix`: " for desktop/graphical machines
-    - `<USERNAME>/plasma-manager.nix`: for `plasma-manager`.
-    Panel setup, common input device settings, theming, all that
+      - `base.nix`: home-manager values for all machines
+      - `desktop.nix`: " for desktop/graphical machines
+      - `plasma-manager.nix`: for `plasma-manager`.
+      Panel setup, common input device settings, theming, all that
   - **`system/`**: having to do with base host configs. 
   Imported from `hosts/<HOSTNAME>/configuration.nix`
     - `base/`: contains commonly-used values across multiple hosts
