@@ -1,10 +1,11 @@
 # user: ty, system: nix13
-{ config, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 
 {
 
   imports = [
-    ../../config/home/ty/home.nix
+    ../../config/home/ty/base.nix
+    ../../config/home/ty/desktop.nix
     ../../config/home/ty/plasma-manager.nix
   ];
 

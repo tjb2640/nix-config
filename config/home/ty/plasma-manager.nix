@@ -71,8 +71,17 @@
       effects = {
         wobblyWindows.enable = true;
       };
+      # Adjust position of title bar buttons
+      titlebarButtons = {
+        left = [
+          "close"
+          "minimize"
+          "maximize"
+        ];
+        right = [];
+      };
     };
-
+  
     # My panel setup
     # Useful: https://develop.kde.org/docs/plasma/scripting/keys/
     panels = [

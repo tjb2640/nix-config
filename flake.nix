@@ -12,6 +12,8 @@
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Zen browser community flake
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
@@ -20,9 +22,14 @@
       # Thinkpad X13 gen 3 (AMD)
       nix13 = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
+        system = "x86_64-linux";
         modules = [
           ./hosts/nix13/configuration.nix
           home-manager.nixosModules.home-manager {
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              system = "x86_64-linux";
+            };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.ty = import ./hosts/nix13/home.nix;
@@ -37,9 +44,14 @@
       # This looks a lot like nix13 (above) but with additional nvidia stuff
       nix14s = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
+        system = "x86_64-linux";
         modules = [
           ./hosts/nix14s/configuration.nix
           home-manager.nixosModules.home-manager {
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              system = "x86_64-linux";
+            };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.ty = import ./hosts/nix14s/home.nix;
