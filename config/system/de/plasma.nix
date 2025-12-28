@@ -37,6 +37,7 @@
     kdePackages.qtstyleplugin-kvantum
     kdePackages.tokodon # mastodon client
     ocs-url # for installing plasma extensions from firefox
+    tela-icon-theme
   ];
 
   # needs dbus

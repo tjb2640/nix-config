@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>start page</title>
+        <title>[ 𝒔𝒕𝒂𝒓𝒕 𝒑𝒂𝒈𝒆 ]</title>
         <link rel="icon" type="image/png" href="../../images/nixos_256.png" />
         <meta charset="utf-8" />
         <style type="text/css">
@@ -10,8 +10,8 @@
             body {
                 background: rgb(34, 19, 19);
                 color: rgb(255, 255, 255);
-                font-family: monospace;
-                font-size: 1.5em;
+                font-family: 'New York Small', 'Free Serif', serif;
+                font-size: 1.25em;
             }
 
             h1, .box {
@@ -26,12 +26,16 @@
             }
 
             .box {
-                clip-path: polygon(0.75em 0, 100% 0, calc(100% - 0.75em) 100%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, calc(100% - 0.75em) 100%, 0 100%);
                 color: rgb(255, 255, 255);
                 display: flex;
                 flex-direction: row;
                 line-height: 1em;
                 margin-bottom: 0.5em;
+            }
+
+            .box:hover {
+                filter: brightness(120%);
             }
 
             .box a {
@@ -44,6 +48,7 @@
             .box a > span {
                 font-size: 1.25em;
                 padding: 0.5em;
+                padding-left: 0;
             }
 
             .box-red {
@@ -71,7 +76,6 @@
 
             .box-purple {
                 background-color: rgb(143, 61, 160);
-                color: rgb(20, 20, 20);
             }
 
             .box-white {
@@ -93,29 +97,32 @@
         <div class="container">
             <h1>Start</h1>
             <div class="box box-red">
-                <a href="https://ddg.gg"><span>🦆</span>ddg.gg</a>
+                <a href="https://ddg.gg" target="_blank"><span>🦆</span>ddg.gg</a>
             </div>
             <div class="box box-green">
-                <a href="https://neocities.org/"><span>🖥️</span>Neocities</a>
+                <a href="https://neocities.org/" target="_blank"><span>🖥️</span>Neocities</a>
             </div>
             <div class="box box-blue">
-                <a href="https://www.thestar.com"><span>🍁</span>The Star</a>
+                <a href="https://www.thestar.com" target="_blank"><span>🍁</span>The Star</a>
+            </div>
+            <div class="box box-red">
+                <a href="https://youtube.com" target="_blank"><span>📼</span>YouTube</a>
             </div>
             <div class="box box-yellow">
-                <a href="https://webmail.migadu.com/#/mailbox/INBOX"><span>📧</span>Migadu Webmail</a>
+                <a href="https://webmail.migadu.com/#/mailbox/INBOX" target="_blank"><span>📧</span>Migadu Webmail</a>
             </div>
             <div class="box box-purple">
-                <a href="https://mail.proton.me/u/0/inbox"><span>📧</span>Proton Inbox</a>
+                <a href="https://mail.proton.me/u/0/inbox" target="_blank"><span>📧</span>Proton Inbox</a>
             </div>
             <h1>RTFM</h1>
             <div class="box box-blue">
-                <a href="https://search.nixos.org/options"><span>❄️</span>NixOS</a>
+                <a href="https://search.nixos.org/options" target="_blank"><span>❄️</span>NixOS</a>
             </div>
             <div class="box box-white">
-                <a href="https://home-manager-options.extranix.com/"><span>🏡</span>Home Manager</a>
+                <a href="https://home-manager-options.extranix.com/" target="_blank"><span>🏡</span>Home Manager</a>
             </div>
             <div class="box box-orange">
-                <a href="https://nix-community.github.io/plasma-manager/options.xhtml"><span>🗔</span>Plasma Manager</a>
+                <a href="https://nix-community.github.io/plasma-manager/options.xhtml" target="_blank"><span>🗔</span>Plasma Manager</a>
             </div>
         </div>
     </body>

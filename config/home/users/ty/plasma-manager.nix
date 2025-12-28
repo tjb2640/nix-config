@@ -16,26 +16,24 @@
         pointSize = 10;
       };
       general = {
-        family = "Hack";
-        pointSize = 10;
+        family = "New York Small";
+        pointSize = 11;
       };
       menu = {
-        family = "Hack";
-        pointSize = 10;
+        family = "New York Small";
+        pointSize = 12;
       };
       small = {
-        family = "Hack";
-        pointSize = 8;
-      };
-      toolbar = {
-        family = "Hack";
+        family = "New York Small";
         pointSize = 10;
       };
+      toolbar = {
+        family = "New York Small";
+        pointSize = 12;
+      };
       windowTitle = {
-        family = "Hack";
-        pointSize = 11;
-        style = "oblique";
-        weight = 1000;
+        family = "New York Small";
+        pointSize = 12;
       };
     };
 
@@ -116,6 +114,10 @@
               };
               overrideForMaximized.enable = false;
               windowTitle = {
+                font = {
+                  size = 12;
+                  bold = false;
+                };
                 hideEmptyTitle = true;
                 source = "appName";
               };
@@ -148,19 +150,19 @@
           {
             digitalClock = {
               date.enable = false;
-              font.family = "Hack";
+              font.family = "New York Small";
               font.size = 8;
             };
           }
         ];
       }
       {
-        alignment = "center";
-        floating = true;
-        height = 36;
+        alignment = "left";  # bottom dock: "center"; vert left: "left"
+        floating = false;  # bottom dock: true; vert left: false
+        height = 42; # bottom dock: 36; vert left: 42
         hiding = "none";
-        lengthMode = "fit";
-        location = "bottom";
+        lengthMode = "fill"; # bottom dock: "fit"; vert left: "fill"
+        location = "left";  # bottom dock: "bottom"; vert left: "left"
         opacity = "translucent";
         widgets = [
           # "dock"
@@ -170,22 +172,19 @@
                 # system: ls -l /run/current-system/sw/share/applications
                 # home-manager: ls -l /etc/profiles/per-user/ty/share/applications
                 launchers = [
-                  "applications:nixos-manual.desktop"
                   "applications:systemsettings.desktop"
                   "applications:Alacritty.desktop"
                   "applications:org.kde.dolphin.desktop"
                   "applications:codium.desktop"
                   "applications:mullvad-vpn.desktop"
                   "applications:firefox.desktop"
-                  "applications:media-downloader.desktop"
+                  "applications:zen-beta.desktop"
                   "applications:org.strawberrymusicplayer.strawberry.desktop"
                   "applications:org.kde.kmail2.desktop"
                   "applications:org.telegram.desktop.desktop"
-                  "applications:signal.desktop"
                   "applications:vesktop.desktop"
                   "applications:writer.desktop"
                   "applications:org.inkscape.Inkscape.desktop"
-                  "applications:org.kde.krita.desktop"
                   "applications:steam.desktop"
                 ];
                 wheelEnabled = false;
@@ -209,6 +208,7 @@
     workspace = {
       # plasma-apply-colorscheme --list-schemes
       colorScheme = "ClaremontDark";
+      iconTheme = "Tela";
       # plasma-apply-desktoptheme --list-themes
       lookAndFeel = "ClaremontDark";
       wallpaper = /home/ty/.dotfiles/resource/wallpapers/36claremont.jpg;
