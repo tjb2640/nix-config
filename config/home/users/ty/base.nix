@@ -5,6 +5,10 @@
 
 {
 
+  imports = [
+    ../../extras/helix.nix
+  ];
+
   home.username = "ty";
   home.homeDirectory = "/home/ty";
   home.packages = with pkgs; [
