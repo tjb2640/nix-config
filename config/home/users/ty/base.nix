@@ -108,14 +108,45 @@
     enableZshIntegration = true;
     settings = {
       add_newline = false;
-      format = lib.concatStrings [
-        "$line_break"
-        "$character"
-      ];
-      scan_timeout = 10;
       character = {
         success_symbol = "[➜](bold green)";
-        error_symbol = "[x](bold red)";
+        error_symbol = "[❌](bold red)";
+      };
+      directory = {
+        read_only = " -w";
+        read_only_style = "italic red";
+        style = "italic yellow";
+        truncation_length = 10;
+      };
+      format = ''
+
+        [┌](yellow)$time[ $directory](yellow)
+        [└](green)$username$hostname[](green)$status $character
+      '';
+      hostname = {
+        disabled = false;
+        format = "[ @ $ssh_symbol$hostname ]($style)";
+        ssh_only = false;
+        style = "fg:#000000 italic bg:green";
+      };
+      scan_timeout = 10;
+      status = {
+        disabled = false;
+        format = "[ $int $common_meaning$signal_name]($style)";
+        style = "italic red";
+      };
+      time = {
+        disabled = false;
+        format = "[ • $time ]($style)";
+        style = "fg:italic #000000 bg:yellow";
+        use_12hr = true;
+      };
+      username = {
+        format = "[ • $user]($style)";
+        disabled = false;
+        show_always = true;
+        style_root = "fg:#000000 italic bg:green";
+        style_user = "fg:#000000 italic bg:green";
       };
     };
   };
