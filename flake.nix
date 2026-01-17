@@ -33,9 +33,9 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.ty = import ./hosts/nix13/home/ty.nix;
-            # I'm using plasma on this system, so use plasma-manager to configure it
+            # If using plasma on this system, use plasma-manager to configure it.
             # I import the actual plasma-manager config options in the above home.nix
-            home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+          #  home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
           }
         ];
       };
