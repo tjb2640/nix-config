@@ -8,7 +8,7 @@
     ./hardware-configuration.nix
     ../../config/system/base/laptop.nix
 #    ../../config/system/de/plasma.nix
-    ../../config/system/extras/niri.nix
+    ../../config/system/wm/niri.nix
     ../../config/system/extras/bluetooth.nix
     ../../config/system/extras/firefox.nix
     ../../config/system/extras/gaming.nix
