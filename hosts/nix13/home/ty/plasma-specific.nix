@@ -1,15 +1,8 @@
-# user: ty, system: nix13
-{ config, inputs, pkgs, ... }:
+{ config, pkgs, libs, ... }:
+
+# Device-specific plasma-manager values
 
 {
-
-  imports = [
-    ../../../config/home/users/ty/base.nix
-    ../../../config/home/users/ty/desktop.nix
-    ../../../config/home/users/ty/plasma-manager.nix
-  ];
-
-  # Device-specific things go here!
 
   # `cat /proc/bus/input/devices` to find this info
   programs.plasma.input.touchpads = [
@@ -34,8 +27,4 @@
     }
   ];
 
-  programs.zsh.shellAliases = {
-    rebuildswitch = "sudo nixos-rebuild switch --flake /home/ty/.dotfiles/#nix13";
-  };
-  
 }
