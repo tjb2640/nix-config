@@ -38,7 +38,7 @@
     };
     settings = {
       bar = {
-        backgroundOpacity = 0.9;
+        backgroundOpacity = 0;
         density = "default";
         marginHorizontal = 12;
         marginVertical = 8;
@@ -68,14 +68,17 @@
             }
             {
               alwaysShowPercentage = true;
+              displayMode = "alwaysShow";
               id = "Battery";
               warningThreshold = 25;
             }
             {
               id = "Volume";
+              displayMode = "alwaysShow";
             }
             {
               id = "Brightness";
+              displayMode = "alwaysShow";
             }
             {
               id = "WiFi";
