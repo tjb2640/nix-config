@@ -3,8 +3,6 @@
 # Configure plasma-manager to declare the plasma 6 install
 
 {
-  # link an icon
-  home.file.".face.icon".source = ../../../../resource/images/avatar.png;
 
   programs.plasma = {
     enable = true;

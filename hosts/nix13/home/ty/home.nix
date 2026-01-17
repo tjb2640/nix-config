@@ -10,6 +10,8 @@
     # Uncomment these if using Plasma:
 #    ../../../../config/home/users/ty/plasma-manager.nix
 #    ./plasma-specific.nix
+    # Uncomment this if using niri:
+    ../../../../config/home/users/ty/noctalia.nix
   ];
 
   # Device-specific things go here!

@@ -55,7 +55,6 @@
       };
       font.size = 11;
       terminal.shell.program = "zsh";
-      window.opacity = 0.9;
     };
   };
 

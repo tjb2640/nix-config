@@ -18,6 +18,9 @@ I have been enjoying [this](https://nixos-and-flakes.thiscute.world/preface)
 book from https://github.com/ryan4yin and have been recommending it to folks 
 looking to learn NixOS. Go check it out and give it a star!
 
+## TODO
+- Dictate my niri config file from this system config
+
 ## My split config structure
 
 I've attempted to separate out my config files and organize them based on their scope,

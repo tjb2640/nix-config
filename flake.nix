@@ -12,6 +12,11 @@
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # noctalia-shell for niri compositor
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Zen browser community flake
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };

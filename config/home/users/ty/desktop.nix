@@ -8,4 +8,7 @@
     ../../extras/zenbrowser.nix
   ];
 
+  # link a face icon for desktop environments
+  home.file.".face.icon".source = ../../../../resource/images/avatar.png;
+
 }
