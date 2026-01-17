@@ -130,7 +130,7 @@
         disabled = false;
         format = "[ @ $ssh_symbol$hostname ]($style)";
         ssh_only = false;
-        style = "fg:#000000 italic bg:green";
+        style = "fg:#000000 bg:green";
       };
       scan_timeout = 10;
       status = {
@@ -141,15 +141,15 @@
       time = {
         disabled = false;
         format = "[ • $time ]($style)";
-        style = "fg:italic #000000 bg:yellow";
+        style = "fg:#000000 bg:yellow";
         use_12hr = true;
       };
       username = {
         format = "[ • $user]($style)";
         disabled = false;
         show_always = true;
-        style_root = "fg:#000000 italic bg:green";
-        style_user = "fg:#000000 italic bg:green";
+        style_root = "fg:#000000 bg:green";
+        style_user = "fg:#000000 bg:green";
       };
     };
   };
