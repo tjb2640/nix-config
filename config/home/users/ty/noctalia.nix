@@ -90,7 +90,7 @@
               formatHorizontal = "HH:mm";
               formatVertical = "HH mm";
               id = "Clock";
-              useMonospacedFont = true;
+              useMonospacedFont = false;
               usePrimaryColor = false;
             }
           ];
@@ -103,6 +103,12 @@
       location = {
         monthBeforeDay = true;
         name = "Pittsburgh, USA";
+      };
+      ui = {
+        fontDefault = "DejaVu Serif";
+        fontFixed = "DejaVu Serif";
+        fontDefaultScale = 1.1;
+        fontFixedScale = 1.1;
       };
     };
   };
