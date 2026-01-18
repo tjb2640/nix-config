@@ -22,6 +22,7 @@
     mako
     pcmanfm
     swaylock
+    udiskie
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
     xwayland-satellite
