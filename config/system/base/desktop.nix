@@ -50,6 +50,7 @@
     # overlays
     apple-fonts
     # nixpkgs
+    cmus
     ffmpeg
     inkscape-with-extensions # load extensions from derivations
     krita
