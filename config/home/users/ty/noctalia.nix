@@ -40,8 +40,6 @@
       bar = {
         backgroundOpacity = 0;
         density = "default";
-        marginHorizontal = 12;
-        marginVertical = 8;
         position = "top";
         showCapsule = true;
         useSeparateOpacity = true;
@@ -53,6 +51,7 @@
             }
             {
               id = "ActiveWindow";
+              maxWidth = 384;
             }
           ];
           center = [
@@ -87,9 +86,9 @@
               id = "Bluetooth";
             }
             {
+              id = "Clock";
               formatHorizontal = "HH:mm";
               formatVertical = "HH mm";
-              id = "Clock";
               useMonospacedFont = false;
               usePrimaryColor = false;
             }
