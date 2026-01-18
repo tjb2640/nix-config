@@ -97,6 +97,12 @@ window-rule {
     open-floating true
 }
 
+// Rule: obsidian open folder window, open floating
+window-rule {
+    match app-id=r#"Electron$"# title="^Open folder as vault$"
+    open-floating true
+}
+
 // Rule: Open Telegram Desktop's media viewer floating
 window-rule {
     match app-id="^org.telegram.desktop$" title="^Media viewer$"
