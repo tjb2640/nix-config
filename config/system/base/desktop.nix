@@ -57,6 +57,7 @@
     libreoffice
     media-downloader # Qt yt-dlp
     mullvad-vpn
+    obsidian
     qbittorrent
     scrcpy # android device screen interaction
     signal-desktop
