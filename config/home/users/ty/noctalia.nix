@@ -72,6 +72,9 @@
               warningThreshold = 25;
             }
             {
+              id = "PowerProfile";
+            }
+            {
               id = "Volume";
               displayMode = "alwaysShow";
             }
