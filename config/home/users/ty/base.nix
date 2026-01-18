@@ -75,6 +75,7 @@
         "separator"
         "os"
         "de"
+        "wm"
         "separator"
         "host"
         "cpu"
