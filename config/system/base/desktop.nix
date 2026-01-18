@@ -60,7 +60,6 @@
     qbittorrent
     scrcpy # android device screen interaction
     signal-desktop
-    strawberry
     telegram-desktop
     vesktop # discord
     vlc
