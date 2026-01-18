@@ -17,6 +17,9 @@
   # Device-specific things go here!
   # Some device-specific plasma-manager values are in ./plasma-specific.nix
 
+  # When using niri, load this device-specific config
+  home.file.".config/niri/config.kdl".source = ./files/.config/niri/config.kdl;
+
   programs.zsh.shellAliases = {
     rebuildswitch = "sudo nixos-rebuild switch --flake /home/ty/.dotfiles/#nix13";
   };
