@@ -83,6 +83,10 @@
               displayMode = "alwaysShow";
             }
             {
+              id = "VPN";
+              displayMode = "alwaysShow";
+            }
+            {
               id = "WiFi";
             }
             {
