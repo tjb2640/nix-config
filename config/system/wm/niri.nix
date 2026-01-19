@@ -20,9 +20,8 @@
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     kdePackages.polkit-kde-agent-1
     mako
-    pcmanfm
+    nemo-with-extensions
     swaylock
-    udiskie
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
     xwayland-satellite
@@ -33,6 +32,7 @@
 
   # Enable some system-level things that noctalia-shell needs
   services.power-profiles-daemon.enable = true;
+  services.udisks2.enable = true;
   services.upower.enable = true;
 
 }
