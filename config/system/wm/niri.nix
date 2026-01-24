@@ -21,14 +21,10 @@
     kdePackages.polkit-kde-agent-1
     mako
     nemo-with-extensions
-    swaylock
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
     xwayland-satellite
   ];
-
-  # Swaylock requires this as we are not using the sway module
-  security.pam.services.swaylock = {};
 
   # Enable some system-level things that noctalia-shell needs
   services.power-profiles-daemon.enable = true;

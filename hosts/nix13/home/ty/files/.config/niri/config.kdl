@@ -63,8 +63,15 @@ output "eDP-1" {
     mode "1920x1200@59.999"
     scale 1.25
     transform "normal"
-    // Position of the output in the global coordinate space
-    // position x=1280 y=0
+}
+
+// AOC Q32G1WG4
+output "PNP(AOC) Q32G1WG4 0x00000B3F" {
+    mode "2560x1440@143.912"
+    scale 1
+    transform "normal"
+    // on my desk it's to the left of the laptop monitor and a little up
+    position x=-2560 y=-840
 }
 
 // Dark red backdrop for the overlay
@@ -142,7 +149,7 @@ binds {
     Alt+Print       { screenshot-window; }
     Mod+Escape      allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P     { power-off-monitors; }
-    Super+Alt+L     hotkey-overlay-title="Lock" { spawn "swaylock" "--color" "#211111"; }
+    Super+Alt+L     hotkey-overlay-title="Lock" { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
     Mod+Shift+E     { quit; }
     Ctrl+Alt+Delete { quit; }
 
