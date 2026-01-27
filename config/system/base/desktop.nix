@@ -9,7 +9,7 @@
   # ###########################################################
   #   OVERLAYS
   # ###########################################################
-  
+
   nixpkgs.overlays = [
     # Fonts: SF & NY
     (final: prev: rec {
@@ -59,6 +59,7 @@
     mullvad-vpn
     obsidian
     qbittorrent
+    qt6Packages.qt6ct
     scrcpy # android device screen interaction
     signal-desktop
     telegram-desktop
