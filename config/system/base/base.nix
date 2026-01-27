@@ -45,6 +45,7 @@
     cifs-utils # SMB/CIFS
     curl
     ddate
+    exfat
     file
     gdb
     git # required by flakes
