@@ -14,6 +14,7 @@
   # adjust some environment variables
   # QT_QPA_PLATFORMTHEME as a stopgap to enable dark mode via qt6ct
   home.sessionVariables = {
+    EDITOR = "hx";
     QT_QPA_PLATFORMTHEME = "qt6ct";
   };
 }
