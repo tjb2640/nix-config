@@ -5,10 +5,16 @@
 # Example config can be found for my main machine: hosts/nix13/home/ty/files/.config/niri/config.kdl
 # The file is copied (not symlinked) in in hosts/nix13/home/ty/home.nix
 # On top of this I run noctalia-shell, configured in home/users/ty/noctalia.nix
+#
+# Start niri with dbus-run-session -- niri
+# (Run ./niri.sh in home dir)
 
 {
 
   programs.niri.enable = true;
+
+  # https://mynixos.com/home-manager/option/xdg.portal.enable
+  environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
 
   # https://github.com/YaLTeR/niri/wiki/Important-Software
   # https://docs.noctalia.dev/getting-started/nixos/
@@ -21,8 +27,6 @@
     kdePackages.polkit-kde-agent-1
     mako
     nemo-with-extensions
-    xdg-desktop-portal-gnome
-    xdg-desktop-portal-gtk
     xwayland-satellite
   ];
 
@@ -30,5 +34,14 @@
   services.power-profiles-daemon.enable = true;
   services.udisks2.enable = true;
   services.upower.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gnome
+      xdg-desktop-portal-gtk
+    ];
+  };
 
 }
