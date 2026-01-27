@@ -53,6 +53,10 @@
               id = "ActiveWindow";
               maxWidth = 384;
             }
+            {
+              id = "MediaMini";
+              maxWidth = 256;
+            }
           ];
           center = [
             {
