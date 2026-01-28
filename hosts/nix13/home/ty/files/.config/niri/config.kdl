@@ -84,6 +84,7 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
+// Noctalia config at: /config/home/users/ty/packages/desktop/niri.nix
 spawn-at-startup "noctalia-shell"
 
 // Rule: Open vscodium maximized

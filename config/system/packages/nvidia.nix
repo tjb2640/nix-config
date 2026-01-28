@@ -25,9 +25,6 @@
 {
   # hardware.graphics is enabled in ../../base/desktop.nix
 
-  # Wiki says this enables driver for Wayland
-  services.xserver.videoDrivers = [ "nvidia" ];
-
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement = {
@@ -37,5 +34,10 @@
     open = false;
     nvidiaSettings = true;
   };
+
+  services.ollama.acceleration = "cuda";
+
+  # Wiki says this enables driver for Wayland
+  services.xserver.videoDrivers = [ "nvidia" ];
 
 }

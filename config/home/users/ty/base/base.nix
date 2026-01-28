@@ -5,10 +5,6 @@
 
 {
 
-  imports = [
-    ../../extras/helix.nix
-  ];
-
   home.username = "ty";
   home.homeDirectory = "/home/ty";
   home.packages = with pkgs; [
@@ -22,6 +18,9 @@
     xz
     zip
   ];
+  home.sessionVariables = {
+    EDITOR = "hx";
+  };
 
   programs.alacritty = {
     enable = true;
@@ -88,6 +87,32 @@
         "separator"
         "colors"
       ];
+    };
+  };
+
+  # Helix editor (hx)
+  programs.helix = {
+    enable = true;
+    settings = {
+      editor = {
+        cursor-shape = {
+          normal = "block";
+          insert = "bar";
+          select = "underline";
+        };
+      };
+      theme = "autumn_night_transparent";
+    };
+    languages.language = [{
+      auto-format = false;
+      formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
+      name = "nix";
+    }];
+    themes = {
+      autumn_night_transparent = {
+        "inherits" = "autumn_night";
+        "ui.background" = { };
+      };
     };
   };
 

@@ -4,9 +4,8 @@
 {
 
   imports = [
-    ../../../../config/home/users/ty/base.nix
-    ../../../../config/home/users/ty/desktop.nix
-    ../../../../config/home/users/ty/plasma-manager.nix
+    ../../../../config/home/users/ty/base/desktop.nix
+    ../../../../config/home/users/ty/packages/plasma-manager.nix
   ];
 
   programs.zsh.shellAliases = {

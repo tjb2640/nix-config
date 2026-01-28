@@ -21,6 +21,8 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
+  # Remember to include plasma-manager on Plasma systems:
+  # home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
   outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
     nixosConfigurations = {
 
@@ -29,7 +31,7 @@
         specialArgs = { inherit inputs; };
         system = "x86_64-linux";
         modules = [
-          ./hosts/nix13/configuration.nix
+          ./hosts/nix13/system.nix
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = {
               inherit inputs;
@@ -38,9 +40,6 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.ty = import ./hosts/nix13/home/ty/home.nix;
-            # If using plasma on this system, use plasma-manager to configure it.
-            # I import the actual plasma-manager config options in the above home.nix
-          #  home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
           }
         ];
       };
@@ -51,7 +50,7 @@
         specialArgs = { inherit inputs; };
         system = "x86_64-linux";
         modules = [
-          ./hosts/nix14s/configuration.nix
+          ./hosts/nix14s/system.nix
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = {
               inherit inputs;
@@ -60,8 +59,6 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.ty = import ./hosts/nix14s/home/ty/home.nix;
-            # I'm using plasma on this system, so use plasma-manager to configure it
-            # I import the actual plasma-manager config options in the above home.nix
             home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
           }
         ];

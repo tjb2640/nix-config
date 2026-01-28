@@ -1,13 +1,24 @@
-{ config, pkgs, inputs, system, lib, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
-# Enables the zen browser and adds some extensions and things
+# home-manager config for desktop machines. Mostly graphical applications
 
 {
-
+  
   imports = [
+    ./base.nix
     inputs.zen-browser.homeModules.beta
   ];
 
+  # link a face icon for desktop environments
+  home.file.".face.icon".source = ../../../../../resource/images/avatar.png;
+
+  # adjust some environment variables
+  # QT_QPA_PLATFORMTHEME as a stopgap to enable dark mode via qt6ct
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+  };
+
+  # Zen browser - my chosen Firefox replacement
   programs.zen-browser = {
     enable = true;
     policies = {
@@ -130,5 +141,4 @@
     spacesForce = true;
     inherit containers pins spaces;
   };
-
 }

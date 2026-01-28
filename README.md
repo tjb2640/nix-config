@@ -12,53 +12,35 @@ Interesting stuff is in `config/` and my `hosts/nix13` host.
 A configuration for Nvidia cards is in `config/programs/nvidia.nix`
 and the host-specific config for `hosts/nix14s/configuration.nix`.
 
-## Cool reference
+## Organization/philosophy
 
-While I was learning Nix, I was reading [this](https://nixos-and-flakes.thiscute.world/preface) 
-book from https://github.com/ryan4yin and have been recommending it to folks 
-looking to learn NixOS. Go check it out and give it a star!
+This is not a dendritic config, I like a host-based config structure. I use `flake.nix` to define different configurations per-host. This config is for one user, `ty`. I have still taken the initiative to split out importable config files per-user for futureproofing.
 
-## My split config structure
+### 1 ++ System config
+The "system" side of the config is imported in each host's `system.nix` file, e.g. `/hosts/nix13/system.nix` for host `nix13`. Importable system configuration files live in `/config/system/`.
 
-I've attempted to separate out my config files and organize them based on their scope,
-first by each host in `hosts/`, then between system- and home-level configs in `config/`.
+Each host needs to import one (and only one) of the following files from `/config/system/base`, depending on the type of computer: `desktop.nix`, `laptop.nix`, or `server.nix`.
 
-Overlays local to this configuration are stored in the `overlays/` directory and then split out in the same way.
-Right now I only have `overlays/system/` overlays.
+Extra packages that might only be wanted on specific hosts can be imported from `/config/system/packages`:
 
-- **`hosts/`**: flaked out, specific to each machine.
-  - `configuration.nix`: sets hostname and imports from `config/system/` as needed
-  - `hardware-configuration.nix`
-  - `home/<USERNAME>.nix`: machine-specific values for `home-manager` and `plasma-manager` per user; also imports from `config/home/users/` as needed
-- `config/`: branched-off files included by files in `hosts/`
-  - **`home/`**: having to do with home directories and user-specific things. 
-    - `extras/`: additional user-level packages
-      - `zenbrowser.nix`: enables the zen browser and preloads some extensions and settings
-    - `users/<USERNAME>/`: base files, specific to each user
-  Imported from `hosts/<HOSTNAME>/home.nix`
-      - `base.nix`: home-manager values for all machines
-      - `desktop.nix`: " for desktop/graphical machines
-      - `plasma-manager.nix`: for `plasma-manager`.
-      Panel setup, common input device settings, theming, all that
-  - **`system/`**: having to do with base host configs. 
-  Imported from `hosts/<HOSTNAME>/configuration.nix`
-    - `base/`: contains commonly-used values across multiple hosts
-      - `base.nix`: base values for all types of machines, not to be imported directly
-      - `desktop.nix`: for all desktop (non-portable graphical) machines
-      - `laptop.nix`: for all laptops/portables (inherits `desktop`)
-      - `server.nix`: values for server machines; mostly firewall and SSH right now
-    - `de/`: configs which enable and configure desktop environments.
-    Right now I only maintain/use `plasma.nix` for Plasma 6 but some `gnome.nix` stuff is in here as well
-    - `extras/`: additional system packages and services
-      - `bluetooth.nix`: enables Bluetooth and Blueman
-      - `firefox.nix`: enables Firefox and sets some managed options (does not touch `user.js`)
-      - `gaming.nix`: Steam and some emulators
-      - `nvidia.nix`: excluding machine-specific things, enables Nvidia, modesetting, and power management. 
-      Example machine-specific values like prime bus IDs can be found in `/hosts/nix14s/configuration.nix`
-      - `plymouth.nix`: enables plymouth to customize my boot process and enables my custom theme overlay
-      - `slop.nix`: AI (ollama & open-webui), in case I ever need to enable it for something; unlikely
-- `overlays/system/`: system-level overlay files
-  - `apple-fonts`: downloads, extracts, & installs Apple's San Francisco and New York fonts
-  - `plasma-theme-claremont`: installs my custom aurorae (window decor), colour scheme, and panel theme for Plasma 6
-  - `plymouth-theme-rbsys`: installs my custom plymouth theme
-- `resource/`: commonly-referenced static files, images, etc.
+- All desktop or laptop computers with an Nvidia GPU should import `nvidia.nix` from here, and then set some machine-specific Bus ID values in their own host `configuration.nix` file. Host `nix14s` provides an example of what to do here.
+- For reasons, I have replaced Firefox in daily usage with Zen Browser, which is configured in home manager and not at the system level. During the course of migration, I am keeping `firefox.nix` around so I can flip back into Firefox for whatever.
+- `gaming.nix` enables Steam and some extra packages like Proton.
+
+Inside `/config/system/packages/desktop` live configs for the Plasma desktop and the niri compositor. I use niri now and am keeping Plasma around just in case I need the config again.
+
+### 2 ++ Home config
+
+I use `home-manager` to configure my home directory. All hosts should have a `/hosts/HOSTNAME/home/ty/home.nix` file for this.
+
+Importable home manager config files live in `/config/home/users/ty`. From that directory, `home.nix` should explicitly import either `base/base.nix` (on servers, for instance) or `base/desktop.nix`. These files should define all home-manager configuration options for the appropriate machine-type context, besides desktop environments, compositors, or optional packages..
+
+If in the system config a `desktop/` file was imported, the file with the same name should be imported from `/config/home/users/ty/packages/desktop`. Optional packages should just go in `packages/**.nix`.
+
+### Overlays
+
+Locally-defined overlays should be placed in `/overlays/system/OVERLAY-NAME/default.nix`.
+
+### Resource files
+
+Place all image and document resource files in `/resource`.

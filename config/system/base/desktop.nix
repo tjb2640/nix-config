@@ -2,6 +2,9 @@
 
 # Desktop computer common values
 
+let 
+  plymouth-theme-rbsys = pkgs.callPackage ../../../overlays/system/plymouth-theme-rbsys/default.nix {};
+in
 {
 
   imports = [ ./base.nix ];
@@ -21,14 +24,51 @@
   #   SYSTEM & SERVICES
   # ###########################################################
 
+  # Custom "rbsys" boot screen
+  boot = {
+    plymouth = {
+      enable = true;
+      theme = "rbsys";
+      themePackages = [ plymouth-theme-rbsys ];
+    };
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "udev.log_priority=3"
+      "rd.systemd.show_status=auto"
+    ];
+    loader.timeout = 0;
+  };
+
   environment.systemPackages = with pkgs; [
     hack-font
   ];
 
-  # Enable these in case they are not already
+  fileSystems."/var/lib/bluetooth" = {
+    device = "/persist/var/lib/bluetooth";
+    options = [ "bind" "noauto" "x-systemd.automount" ];
+    noCheck = true;
+  };
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket"; # A2DP sink for modern headsets
+        Experimental = true; # enable this for viewing battery state of connected BT device
+      };
+    };
+  };
+
+  # Enable these explicitly in case they are disabled
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
 
+  services.blueman.enable = true;
   services.mullvad-vpn.enable = true;
   services.openssh.enable = lib.mkForce false;
   services.pipewire = {
@@ -43,12 +83,24 @@
   security.rtkit.enable = true; # let Pipewire use the realtime scheduler
 
   # ###########################################################
-  #   ACCOUNTS
+  #   EXTRA PACKAGES
   # ###########################################################
+
+  services.ollama = {
+    enable = true;
+    acceleration = "rocm"; # AMD default, packages/nvidia.nix will set this to CUDA
+    loadModels = [ "deepseek-r1:1.5b" "dolphin3:8b" ];
+  };
+
+  services.open-webui = {
+    enable = true;
+    port = 8083;
+  };
 
   users.users.ty.packages = with pkgs; [
     # overlays
     apple-fonts
+    plymouth-theme-rbsys
     # nixpkgs
     cmus
     ffmpeg

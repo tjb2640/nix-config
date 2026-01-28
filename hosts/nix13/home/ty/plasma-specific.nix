@@ -1,6 +1,6 @@
 { config, pkgs, libs, ... }:
 
-# Device-specific plasma-manager values
+# Device-specific plasma-manager values for host nix13
 
 {
 

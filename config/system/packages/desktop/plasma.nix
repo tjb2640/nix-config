@@ -32,10 +32,8 @@
     kdePackages.kdenlive
     kdePackages.kmail
     kdePackages.kmail-account-wizard
-    kdePackages.ksudoku
     kdePackages.powerdevil
     kdePackages.qtstyleplugin-kvantum
-    kdePackages.tokodon # mastodon client
     ocs-url # for installing plasma extensions from firefox
     tela-icon-theme
   ];

@@ -15,6 +15,9 @@
     };
   };
 
+  # niri start script! needs wrapped in dbus
+  home.file."niri.sh".source = ../../files/niri.sh;
+
   programs.noctalia-shell = {
     enable = true;
     colors = {
@@ -120,6 +123,15 @@
         fontDefaultScale = 1.1;
         fontFixedScale = 1.1;
       };
+    };
+  };
+
+  services.udiskie = {
+    enable = true;
+    settings = {
+        program_options = {
+            file_manager = "${pkgs.nemo-with-extensions}/bin/nemo";
+        };
     };
   };
 }
