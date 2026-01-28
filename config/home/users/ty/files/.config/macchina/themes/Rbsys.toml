@@ -1,0 +1,35 @@
+spacing         = 1
+padding         = 1
+hide_ascii      = true
+separator       = "▸"
+key_color       = "Magenta"
+separator_color = "Yellow"
+
+[palette]
+glyph = "▨ "
+type = "Dark"
+visible = true
+
+[bar]
+visible         = false
+
+[box]
+title           = "─┤ 🍁 ᴛʏ'ꜱ ᴘᴜᴛᴇʀ 🍁 ├"
+border          = "rounded"
+visible         = true
+
+[box.inner_margin]
+x               = 1
+y               = 1
+
+[keys]
+host            = "Host"
+machine         = "PC"
+distro          = "Linux"
+shell           = "Shell"
+de              = "DE"
+wm              = "WM"
+resolution      = "Res"
+cpu             = "CPU"
+gpu             = "GPU"
+memory          = "RAM"

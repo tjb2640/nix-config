@@ -1,0 +1,4 @@
+current_shell = false
+physical_cores = false
+theme = "Rbsys"
+show = ["Distribution", "Host", "Machine", "Shell", "DesktopEnvironment", "WindowManager", "Resolution", "Processor", "GPU", "Memory"]

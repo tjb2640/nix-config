@@ -6,8 +6,11 @@
 {
 
   home.username = "ty";
+  home.file.".config/macchina/themes/Rbsys.toml".source = ../files/.config/macchina/themes/Rbsys.toml;
+  home.file.".config/macchina/macchina.toml".source = ../files/.config/macchina/macchina.toml;
   home.homeDirectory = "/home/ty";
   home.packages = with pkgs; [
+    macchina
     mullvad # command line tools for mullvad vpn
   ];
   home.sessionVariables = {
