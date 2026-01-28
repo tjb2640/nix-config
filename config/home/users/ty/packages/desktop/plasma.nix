@@ -55,6 +55,25 @@
         vendorId = "17ef";
         acceleration = -0.2;
       }
+      # Host nix13's builtin trackpoint
+      {
+        enable = true;
+        name = "TPPS\\/2 Elan TrackPoint";
+        productId = "000a";
+        vendorId = "0002";
+        acceleration = -0.6;
+      }
+    ];
+
+    # `cat /proc/bus/input/devices` to find this info
+    input.touchpads = [
+      # Host nix13's builtin touchpad
+      {
+        enable = false;
+        name = "ELAN0678:00 04F3:3195 Touchpad";
+        productId = "3195";
+        vendorId = "04f3";
+      }
     ];
 
     kscreenlocker = {

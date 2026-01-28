@@ -6,7 +6,6 @@
   imports = [
     ../../../../config/home/users/ty/base/desktop.nix
     ../../../../config/home/users/ty/packages/desktop/niri.nix
-    # Plasma: Some device-specific plasma-manager values are in ./plasma-specific.nix
   ];
 
   # Niri config is device-specific. Home manager when?

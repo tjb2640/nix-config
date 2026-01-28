@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }:
 
-# Configure noctalia (for niri) with home-manager
+# Configure noctalia shell (for niri) with home-manager
 
 {
 

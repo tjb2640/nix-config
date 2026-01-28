@@ -25,7 +25,6 @@
   };
 
   users.users.ty.packages = with pkgs; [
-    plasma-theme-claremont
     aurorae-theme-claremont
     kdePackages.kate
     kdePackages.kcalc
@@ -35,6 +34,7 @@
     kdePackages.powerdevil
     kdePackages.qtstyleplugin-kvantum
     ocs-url # for installing plasma extensions from firefox
+    plasma-theme-claremont
     tela-icon-theme
   ];
 

@@ -59,7 +59,7 @@ in
     settings = {
       General = {
         Enable = "Source,Sink,Media,Socket"; # A2DP sink for modern headsets
-        Experimental = true; # enable this for viewing battery state of connected BT device
+        Experimental = true; # for viewing battery state of connected device
       };
     };
   };
@@ -98,11 +98,8 @@ in
   };
 
   users.users.ty.packages = with pkgs; [
-    # overlays
     apple-fonts
-    plymouth-theme-rbsys
-    # nixpkgs
-    cmus
+    cmus # terminal music player
     ffmpeg
     inkscape-with-extensions # load extensions from derivations
     krita
@@ -110,16 +107,17 @@ in
     media-downloader # Qt yt-dlp
     mullvad-vpn
     obsidian
+    plymouth-theme-rbsys
     qbittorrent
-    qt6Packages.qt6ct
+    qt6Packages.qt6ct # qt6 theming
     scrcpy # android device screen interaction
     signal-desktop
-    strawberry
+    strawberry # graphical music player
     telegram-desktop
     vesktop # discord
     vlc
-    vscodium
-    yt-dlp
+    vscodium # de-microsofted vscode
+    yt-dlp # youtube downloader
     youtube-music
   ];
 

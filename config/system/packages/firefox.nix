@@ -2,6 +2,7 @@
 
 # Home manager default settings for Firefox
 # Will result in a message in the settings about a managed browser
+# TODO: this file should soon be deprecated in some way, I am switching to Zen Browser
 
 {
   

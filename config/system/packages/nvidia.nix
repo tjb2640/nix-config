@@ -5,11 +5,11 @@
 # 
 # All system-specific options like hardware.nvidia.prime
 # and the selected driver package
-# should be defined in the laptop's configuration.nix
+# should be defined in the host's system.nix
 #
 # https://nixos.wiki/wiki/Nvidia
 #
-# e.g. hosts/<...>/configuration.nix:
+# e.g. hosts/<...>/system.nix:
 #
 #  {
 #    hardware.nvidia.prime = {
@@ -20,10 +20,10 @@
 #    };
 #  }
 #
-# hosts/nix14s/configuration.nix has an example configuration
+# hosts/nix14s/system.nix has an example configuration
 
 {
-  # hardware.graphics is enabled in ../../base/desktop.nix
+  # hardware.graphics is enabled in /config/system/base/desktop.nix
 
   hardware.nvidia = {
     modesetting.enable = true;
@@ -34,7 +34,8 @@
     open = false;
     nvidiaSettings = true;
   };
-
+  
+  # This was previously set to "rocm" for amdgpu in /config/system/base/desktop.nix
   services.ollama.acceleration = "cuda";
 
   # Wiki says this enables driver for Wayland

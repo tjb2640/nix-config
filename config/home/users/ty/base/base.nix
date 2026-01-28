@@ -1,22 +1,14 @@
 { config, pkgs, inputs, lib, ... }:
 
 # Common home-manager values across client and server machines for my user
-# Imported by /hosts/<...>/home.nix 
+# Imported by /hosts/<...>/home/ty/home.nix 
 
 {
 
   home.username = "ty";
   home.homeDirectory = "/home/ty";
   home.packages = with pkgs; [
-    eza # flashy modern ls alternative
-    htop
-    lm_sensors # provides `sensors`
-    mullvad # command line tools
-    p7zip
-    unzip
-    usbutils # provides `lsusb`
-    xz
-    zip
+    mullvad # command line tools for mullvad vpn
   ];
   home.sessionVariables = {
     EDITOR = "hx";

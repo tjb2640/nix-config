@@ -33,6 +33,7 @@
   nix.gc = {
     automatic = true;
     dates = "weekly";
+    options = "--delete-older-than 7d";
     persistent = true;
   };
 
@@ -46,16 +47,24 @@
     curl
     ddate
     exfat
+    eza # flashy modern ls alternative
     file
     gdb
     git # required by flakes
     glib
     glibc
+    htop
     libgcc
+    lm_sensors # provides `sensors`
     lshw # useful for discovering bus id values
+    p7zip
     rename
+    unzip
+    usbutils # provides `lsusb`
     vim
     wget
+    xz
+    zip
   ];
   
   # "Some programs need SUID wrappers, can be configured
@@ -78,9 +87,6 @@
     isNormalUser = true;
     description = "Ty B";
     extraGroups = [ "networkmanager" "wheel" "adbusers" ];
-    packages = with pkgs; [
-      # managed in ./common-desktop, ./common-server, and hosts' ./home files (home-manager)
-    ];
   };
 
 }
