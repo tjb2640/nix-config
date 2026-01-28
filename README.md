@@ -1,6 +1,7 @@
 # My NixOS Configuration
 
-![Alt text](resource/images/nixos_256.png)
+![NixOS Logo](resource/images/nixos_256.png)
+![Macchina fetch output](resource/images/macchina.png)
 
 This is my personal [NixOS](https://nixos.org/) configuration.
 
