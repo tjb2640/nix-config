@@ -139,7 +139,7 @@ binds {
     //  APPLICATIONS
     ///////////////////////////////////////////////////////////////////////
 
-    Mod+B hotkey-overlay-title="Zen browser" { spawn "zen"; }
+    Mod+O hotkey-overlay-title="Zen browser" { spawn "zen"; }
     Mod+T hotkey-overlay-title="Terminal" { spawn "alacritty"; }
     Mod+M hotkey-overlay-title="Codium" { spawn "codium"; }
     Mod+S hotkey-overlay-title="Strawberry" { spawn "strawberry"; }
@@ -152,7 +152,7 @@ binds {
     ///////////////////////////////////////////////////////////////////////
 
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+O           repeat=false { toggle-overview; }
+    Mod+B           repeat=false { toggle-overview; }
     Print           { screenshot; }
     Ctrl+Print      { screenshot-screen; }
     Alt+Print       { screenshot-window; }
