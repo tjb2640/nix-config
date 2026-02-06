@@ -64,6 +64,24 @@
         ];
       };
 
+      # Lenovo Yoga 16" (2024?)
+      yoga16 = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/yoga16/system.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              system = "x86_64-linux";
+            };
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.ty = import ./hosts/yoga16/home/ty/home.nix;
+          }
+        ];
+      };
+
     };
   };
 

@@ -36,7 +36,7 @@
   };
   
   # This was previously set to "rocm" for amdgpu in /config/system/base/desktop.nix
-  services.ollama.acceleration = "cuda";
+  services.ollama.acceleration = lib.mkForce "cuda";
 
   # Wiki says this enables driver for Wayland
   services.xserver.videoDrivers = [ "nvidia" ];

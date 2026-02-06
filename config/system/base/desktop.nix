@@ -88,7 +88,7 @@ in
 
   services.ollama = {
     enable = true;
-    acceleration = "rocm"; # AMD default, packages/nvidia.nix will set this to CUDA
+    acceleration = lib.mkDefault "rocm"; # AMD default, packages/nvidia.nix will set this to CUDA
     loadModels = [ "deepseek-r1:1.5b" "dolphin3:8b" ];
   };
 
