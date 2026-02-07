@@ -44,7 +44,7 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 2
+        width 4
         active-gradient from="#b04b37" to="#b07637" angle=180 relative-to="workspace-view"
     }
 
@@ -97,7 +97,8 @@ window-rule {
 // Rule: Open zen browser maximized
 window-rule {
     match app-id=r#"zen"#
-    open-maximized true
+//    open-maximized true
+    default-column-width { proportion 0.95; }
 }
 
 // Rule: Open the Firefox picture-in-picture player as floating by default
@@ -144,7 +145,7 @@ binds {
     Mod+T hotkey-overlay-title="Terminal" { spawn "alacritty"; }
     Mod+M hotkey-overlay-title="Codium" { spawn "codium"; }
     Mod+S hotkey-overlay-title="Strawberry" { spawn "strawberry"; }
-    Mod+R hotkey-overlay-title="Apps" { spawn "fuzzel" "-b322222ff" "-B3" "-Ca23e2aff" "-td6beb9ff" "-s90b542ff" "-S222222ff" "--prompt-color" "c5a62fff" "--input-color" "c5a62fff" "-M427cb5ff" "-r8" "-w36" "--line-height" "24" "-y12" "-P12" "--use-bold"; }
+    Mod+R hotkey-overlay-title="Apps" { spawn "fuzzel" "-b322222ff" "-B5" "-Ca23e2aff" "-td6beb9ff" "-s90b542ff" "-S222222ff" "--prompt-color" "c5a62fff" "--input-color" "c5a62fff" "-M427cb5ff" "-r8" "-w36" "--line-height" "24" "-y12" "-P12" "--use-bold"; }
 
 
 
