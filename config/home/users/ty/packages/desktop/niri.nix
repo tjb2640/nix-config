@@ -73,8 +73,8 @@
               id = "Tray";
             }
             {
-              alwaysShowPercentage = true;
-              displayMode = "alwaysShow";
+              displayMode = "icon-always";
+              hideIfIdle = false;
               id = "Battery";
               warningThreshold = 25;
             }
