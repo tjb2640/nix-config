@@ -9,7 +9,7 @@
   ];
 
   programs.zsh.shellAliases = {
-    rebuildswitch = "sudo nixos-rebuild switch --flake /home/ty/.dotfiles/#nix14s";
+    rbs = "sudo nixos-rebuild switch --flake /home/ty/.dotfiles/#nix14s";
   };
   
 }
