@@ -88,8 +88,8 @@ in
 
   services.ollama = {
     enable = true;
-    acceleration = lib.mkDefault "rocm"; # AMD default, packages/nvidia.nix will set this to CUDA
     loadModels = [ "deepseek-r1:1.5b" "dolphin3:8b" ];
+    package = lib.mkDefault pkgs.ollama-rocm; # AMD default, packages/nvidia.nix will set this to "-cuda
   };
 
   services.open-webui = {
@@ -107,6 +107,7 @@ in
     media-downloader # Qt yt-dlp
     mullvad-vpn
     obsidian
+    pear-desktop # (formerly youtube-music)
     plymouth-theme-rbsys
     qbittorrent
     qt6Packages.qt6ct # qt6 theming
@@ -118,7 +119,6 @@ in
     vlc
     vscodium # de-microsofted vscode
     yt-dlp # youtube downloader
-    youtube-music
   ];
 
 }

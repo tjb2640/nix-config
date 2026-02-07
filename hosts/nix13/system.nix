@@ -10,6 +10,7 @@
     ../../config/system/packages/desktop/niri.nix
     ../../config/system/packages/firefox.nix
     ../../config/system/packages/gaming.nix
+    ../../config/system/packages/idea.nix
   ];
 
   # No need to touch below

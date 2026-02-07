@@ -100,7 +100,7 @@
     };
     languages.language = [{
       auto-format = false;
-      formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
+      formatter.command = lib.getExe pkgs.nixfmt;
       name = "nix";
     }];
     themes = {
