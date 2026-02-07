@@ -91,7 +91,8 @@ spawn-at-startup "noctalia-shell"
 // Rule: Open vscodium maximized
 window-rule {
     match app-id=r#"VSCodium"#
-    open-maximized true
+//    open-maximized true
+    default-column-width { proportion 0.95; }
 }
 
 // Rule: Open zen browser maximized
