@@ -12,6 +12,7 @@
   home.packages = with pkgs; [
     macchina
     mullvad # command line tools for mullvad vpn
+    (writeShellScriptBin "cryptdrive" (builtins.readFile ../files/localbin/cryptdrive.sh))
   ];
   home.sessionVariables = {
     EDITOR = "hx";
