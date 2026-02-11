@@ -7,7 +7,7 @@ userdrivedir="$mountpoint/$username"
 # links to $userdrivedir
 linkat="/home/$username/CryptDrive"
 
-if [ "$username" == "root" ]; then
+if [ "root" == "$username" ]; then
     printf "Do not run this script with root permissions.\n"
     exit 1
 fi
@@ -47,7 +47,7 @@ promptSelectDevice() {
     printbar
     read -p "Enter mount source (e.g. /dev/sdX): " dpath
 
-    if [ "$dpath" == "" ]; then
+    if [ "" == "$dpath" ]; then
         printf "Please enter a valid block, e.g. /dev/sdX \n"
         promptSelectDevice
     fi
