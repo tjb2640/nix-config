@@ -22,6 +22,9 @@
 
   # Time and Locale
   i18n.defaultLocale = "en_CA.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_ALL = "en_CA.UTF-8"
+  };
   time.timeZone = lib.mkDefault "America/Toronto";
 
   networking.networkmanager.enable = true;
