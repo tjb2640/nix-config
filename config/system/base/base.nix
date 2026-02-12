@@ -23,7 +23,7 @@
   # Time and Locale
   i18n.defaultLocale = "en_CA.UTF-8";
   i18n.extraLocaleSettings = {
-    LC_ALL = "en_CA.UTF-8"
+    LC_ALL = "en_CA.UTF-8";
   };
   time.timeZone = lib.mkDefault "America/Toronto";
 
@@ -42,6 +42,11 @@
     dates = "weekly";
     options = "--delete-older-than 7d";
     persistent = true;
+  };
+
+  nix.settings = {
+    allowed-users = [ "@wheel" ];
+    auto-optimise-store = true;
   };
 
   # ###########################################################
