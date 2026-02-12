@@ -5,6 +5,10 @@
 # not all three at once.
 
 {
+
+  imports = [
+    inputs.cryptdrive.nixModules.default
+  ];
   
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.enable = true;
