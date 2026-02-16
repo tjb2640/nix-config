@@ -45,6 +45,7 @@ in
 
   environment.systemPackages = with pkgs; [
     hack-font
+    teamspeak6-client
   ];
 
   fileSystems."/var/lib/bluetooth" = {
