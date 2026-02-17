@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 # File that enables enable modern NVidia GPU stuff
 # This does not work out of the box with laptops!

@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }:
+{ inputs, pkgs, ... }:
 
 # Enable niri (scrolling wayland compositor)
 # Note that my config is system-specific.

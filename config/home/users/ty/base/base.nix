@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }:
+{ pkgs, lib, ... }:
 
 # Common home-manager values across client and server machines for my user
 # Imported by /hosts/<...>/home/ty/home.nix 

@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }:
+{ pkgs, ... }:
 
 # Enables KDE Plasma 6 as the desktop environment
 # https://wiki.nixos.org/wiki/KDE

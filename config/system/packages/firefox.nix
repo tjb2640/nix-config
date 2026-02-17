@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ ... }:
 
 # Home manager default settings for Firefox
 # Will result in a message in the settings about a managed browser

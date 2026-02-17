@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, modulesPath, ... }:
+{ config, lib, modulesPath, ... }:
 
 # Host: nix13 (my Thinkpad X13 gen 3 laptop)
 

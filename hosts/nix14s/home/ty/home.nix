@@ -1,5 +1,5 @@
 # user: ty, system: nix14s
-{ config, pkgs, ... }:
+{ ... }:
 
 {
 

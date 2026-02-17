@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }:
+{ ... }:
 
 # Laptop computers common values
 

@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 # Trying IDEA OSS right now, reserving this file in case I want to 
 # declare plugins in the future

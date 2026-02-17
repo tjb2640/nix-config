@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ ... }:
 
 # Enable Incus (LXD replacement)
 # TODO: https://wiki.nixos.org/wiki/Incus

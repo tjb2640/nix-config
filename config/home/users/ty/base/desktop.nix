@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }:
+{ pkgs, inputs, ... }:
 
 # home-manager config for desktop machines. Mostly graphical applications
 

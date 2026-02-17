@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }:
+{ pkgs, inputs, lib, ... }:
 
 # Don't import this file. Import one of ./desktop.nix, ./laptop.nix,
 # or ./server.nix. One only, depending on type of system,

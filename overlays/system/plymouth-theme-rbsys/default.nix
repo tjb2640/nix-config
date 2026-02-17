@@ -1,10 +1,10 @@
-{ config, pkgs, lib, stdenv, fetchurl, unzip, ... }:
+{ lib, stdenv, fetchurl, unzip, ... }:
 
 # Theme plymouth with an "rbsys" logo featuring my window decorations
 
 stdenv.mkDerivation rec {
   pname = "plymouth-theme-rbsys";
-  version = "2025.12.25.0";
+  version = "2025.12.25.1";
 
   rbsysTheme = fetchurl {
     url = "https://github.com/tjb2640/plymouth-theme-rbsys/archive/refs/tags/v1.0.0.zip";

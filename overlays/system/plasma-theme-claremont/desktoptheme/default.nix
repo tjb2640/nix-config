@@ -1,10 +1,10 @@
-{ config, pkgs, lib, stdenv, fetchurl, unzip, ... }:
+{ lib, stdenv, fetchurl, unzip, ... }:
 
 # Grab my own red plasma theme from my github (releases) & install it
 
 stdenv.mkDerivation rec {
   pname = "plasma-theme-claremont";
-  version = "2025.12.5.0";
+  version = "2025.12.5.1";
 
   claremontTheme = fetchurl {
     url = "https://github.com/tjb2640/plasma6-claremont-theme/archive/refs/tags/v1.0.0.zip";

@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, modulesPath, ... }:
+{ config, lib, modulesPath, ... }:
 
 # Host: yoga16 (16" Lenovo Yoga from 2024, I think?)
 

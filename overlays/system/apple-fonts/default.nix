@@ -1,10 +1,10 @@
-{ config, pkgs, lib, stdenv, fetchurl, p7zip, ... }:
+{ stdenv, lib, fetchurl, p7zip, ... }:
 
 # Installs SF and NY fonts
 
 stdenv.mkDerivation rec {
   pname = "apple-fonts";
-  version = "2026.02.10.0";
+  version = "2026.02.10.1";
 
   appleFontSFPro = fetchurl {
     url = "https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg";

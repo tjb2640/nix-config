@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }:
+{ lib, ... }:
 
 # Server computer common values
 

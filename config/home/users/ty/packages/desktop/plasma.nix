@@ -1,4 +1,4 @@
-{ config, pkgs, libs, ... }:
+{ ... }:
 
 # Configure plasma-manager to declare the plasma 6 install
 
