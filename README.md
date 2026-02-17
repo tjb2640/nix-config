@@ -16,3 +16,7 @@ and the host-specific config for `hosts/nix14s/configuration.nix`.
 ## Docs/notes
 
 - [Organization/philosophy](notes/organization.md)
+
+## TODO
+
+- Consider [musnix](https://github.com/musnix/musnix)
