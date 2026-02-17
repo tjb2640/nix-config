@@ -142,7 +142,7 @@ binds {
     //  APPLICATIONS
     ///////////////////////////////////////////////////////////////////////
 
-    Mod+O hotkey-overlay-title="Zen browser" { spawn "zen"; }
+    Mod+Z hotkey-overlay-title="Zen browser" { spawn "zen-beta"; }
     Mod+T hotkey-overlay-title="Terminal" { spawn "alacritty"; }
     Mod+M hotkey-overlay-title="Codium" { spawn "codium"; }
     Mod+S hotkey-overlay-title="Strawberry" { spawn "strawberry"; }
