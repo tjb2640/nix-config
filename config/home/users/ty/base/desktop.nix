@@ -24,7 +24,7 @@
       # custom theme
       colors = {
         primary = {
-          background = "#322222";
+          background = "#231111";
           foreground = "#d6beb9";
         };
         normal = {
@@ -50,6 +50,9 @@
       };
       font.size = 11;
       terminal.shell.program = "zsh";
+      window = {
+        opacity = 0.9;
+      };
     };
   };
   
