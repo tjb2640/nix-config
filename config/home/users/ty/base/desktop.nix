@@ -18,6 +18,41 @@
     QT_QPA_PLATFORMTHEME = "qt6ct";
   };
 
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      # custom theme
+      colors = {
+        primary = {
+          background = "#322222";
+          foreground = "#d6beb9";
+        };
+        normal = {
+          black = "#6b6b6b";
+          red = "#a23e2a";
+          green = "#90b542";
+          yellow = "#c5a62f";
+          blue = "#427cb5";
+          magenta = "#8f3da0";
+          cyan = "#48c5c4";
+          white = "#e1cfcb";
+        };
+        bright = {
+          black = "#8e8e8e";
+          red = "#b04b37";
+          green = "#b2ce79";
+          yellow = "#dbc367";
+          blue = "#86add2";
+          magenta = "#bc76cd";
+          cyan = "#77dddd";
+          white = "#ece1df";
+        };
+      };
+      font.size = 11;
+      terminal.shell.program = "zsh";
+    };
+  };
+  
   # Zen browser - my chosen Firefox replacement
   programs.zen-browser = {
     enable = true;
