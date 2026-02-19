@@ -34,16 +34,16 @@
       mPrimary = "#a23e2a";
       mSecondary = "#c5a62f";
       mShadow = "#000000";
-      mSurface = "#322222";
+      mSurface = "#231111";
       mHover = "#90b542";
       mSurfaceVariant = "#311f1f";
       mTertiary = "#cccccc";
     };
     settings = {
       bar = {
-        backgroundOpacity = 0;
+        backgroundOpacity = 0.9;
         density = "default";
-        position = "top";
+        position = "bottom";
         showCapsule = true;
         useSeparateOpacity = true;
         widgets = {
@@ -53,19 +53,19 @@
               useDistroLogo = true;
             }
             {
-              id = "ActiveWindow";
-              maxWidth = 384;
+              hideUnoccupied = false;
+              id = "Workspace";
+              labelMode = "none";
             }
             {
-              id = "MediaMini";
-              maxWidth = 256;
+              id = "ActiveWindow";
+              maxWidth = 300;
             }
           ];
           center = [
             {
-              hideUnoccupied = false;
-              id = "Workspace";
-              labelMode = "none";
+              id = "MediaMini";
+              maxWidth = 384;
             }
           ];
           right = [
@@ -101,7 +101,7 @@
             }
             {
               id = "Clock";
-              formatHorizontal = "HH:mm";
+              formatHorizontal = "MM/dd @ HH:mm";
               formatVertical = "HH mm";
               useMonospacedFont = false;
               usePrimaryColor = false;
