@@ -77,6 +77,8 @@
         Fingerprinting = true;
       };
     };
+    # suppresses message about migrating ~/.zen to ~/.config/zen
+    suppressXdgMigrationWarning = true;
   };
 
   programs.zen-browser.profiles.default = let

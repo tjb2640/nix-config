@@ -102,6 +102,7 @@ in
     apple-fonts
     cmus # terminal music player
     ffmpeg
+    imagemagick
     inkscape-with-extensions # load extensions from derivations
     krita
     libreoffice
