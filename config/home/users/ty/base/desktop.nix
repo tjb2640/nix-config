@@ -55,6 +55,12 @@
       };
     };
   };
+
+  # cmus - terminal music player
+  programs.cmus = {
+    enable = true;
+    theme = "jellybeans";
+  };
   
   # Zen browser - my chosen Firefox replacement
   programs.zen-browser = {

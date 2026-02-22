@@ -100,7 +100,6 @@ in
 
   users.users.ty.packages = with pkgs; [
     apple-fonts
-    cmus # terminal music player
     ffmpeg
     imagemagick
     inkscape-with-extensions # load extensions from derivations
