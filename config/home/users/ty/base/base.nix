@@ -60,6 +60,7 @@
           insert = "bar";
           select = "underline";
         };
+        line-number = "relative";
       };
       theme = "autumn_night_transparent";
     };
