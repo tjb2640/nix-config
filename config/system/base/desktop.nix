@@ -116,7 +116,6 @@ in
     signal-desktop
     strawberry # graphical music player
     telegram-desktop
-    vesktop # discord
     vlc
     vscodium # de-microsofted vscode
     yt-dlp # youtube downloader
