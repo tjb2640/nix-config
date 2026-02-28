@@ -4,6 +4,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs2511.url = "github:NixOS/nixpkgs/nixos-25.11";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,13 +29,19 @@
 
   # Remember to include plasma-manager on Plasma systems:
   # home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
-  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs2511, home-manager, plasma-manager, ... }@inputs: {
     nixosConfigurations = {
 
       # Thinkpad X13 gen 3 (AMD)
-      nix13 = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+      nix13 = nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs;
+          pkgs-2511 = import nixpkgs2511 {
+            system = system;
+            config.allowUnfree = true;
+          };
+        };
         modules = [
           ./hosts/nix13/system.nix
           home-manager.nixosModules.home-manager {

@@ -11,7 +11,6 @@
     ../../config/system/packages/firefox.nix
     ../../config/system/packages/gaming.nix
     ../../config/system/packages/idea.nix
-    ../../config/system/packages/incus.nix
   ];
 
   # No need to touch below
