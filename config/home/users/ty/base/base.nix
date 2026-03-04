@@ -8,6 +8,7 @@
   home.username = "ty";
   home.file.".config/macchina/themes/Rbsys.toml".source = ../files/.config/macchina/themes/Rbsys.toml;
   home.file.".config/macchina/macchina.toml".source = ../files/.config/macchina/macchina.toml;
+  home.file."unfck-store.sh".source = ../files/unfck-store.sh;
   home.homeDirectory = "/home/ty";
   home.packages = with pkgs; [
     macchina

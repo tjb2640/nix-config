@@ -46,7 +46,7 @@
 
   nix.settings = {
     allowed-users = [ "@wheel" ];
-    auto-optimise-store = true;
+    auto-optimise-store = false;
   };
 
   # ###########################################################
