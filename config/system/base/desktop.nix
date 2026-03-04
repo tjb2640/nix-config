@@ -1,4 +1,4 @@
-{ pkgs, pkgs-2511, lib, ... }:
+{ pkgs, lib, ... }:
 
 # Desktop computer common values
 
@@ -103,7 +103,7 @@ in
     ffmpeg
     imagemagick
     inkscape-with-extensions # load extensions from derivations
-    pkgs-2511.krita
+    krita
     libreoffice
     media-downloader # Qt yt-dlp
     mullvad-vpn
