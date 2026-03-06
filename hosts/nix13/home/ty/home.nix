@@ -12,7 +12,7 @@
   home.file.".config/niri/config.kdl".source = ./files/.config/niri/config.kdl;
 
   programs.zsh.shellAliases = {
-    rbs = "sudo nixos-rebuild switch --flake /home/ty/.dotfiles/#nix13";
+    rbs = "sudo echo 'Rebuilding flake nix13' && yes | sudo nixos-rebuild switch --flake /home/ty/.dotfiles/#nix13";
   };
   
 }
