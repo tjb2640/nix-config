@@ -43,7 +43,6 @@
         "memory"
         "display"
         "disk"
-        "separator"
         "shell"
         "separator"
         "colors"
@@ -111,8 +110,8 @@
       };
       format = ''
 
-        [┌](yellow)$time[ $directory](yellow)
-        [└](green)$username$hostname[](green)$status $character
+        [╭─](yellow)$time[ 🍁 $directory](yellow)
+        [╰─](green)$username$hostname[](green)$status $character
       '';
       hostname = {
         disabled = false;
