@@ -27,7 +27,7 @@ in
   # Custom "rbsys" boot screen
   boot = {
     plymouth = {
-      enable = true;
+      enable = false;
       theme = "rbsys";
       themePackages = [ plymouth-theme-rbsys ];
     };
