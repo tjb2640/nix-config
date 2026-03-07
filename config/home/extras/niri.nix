@@ -16,7 +16,7 @@
   };
 
   # niri start script! needs wrapped in dbus
-  home.file."niri.sh".source = ../../files/niri.sh;
+  home.file."niri.sh".source = ../files/niri.sh;
 
   programs.noctalia-shell = {
     enable = true;

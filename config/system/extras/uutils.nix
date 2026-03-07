@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+# This is a module adapted from the official NixOS wiki that replaces all coreutils,
+# find and diff packages with uutils versions (MIT licensed, rust)
+
 let
   coreutils-full-name = "coreuutils-full-" + builtins.concatStringsSep ""
     (builtins.genList (_: "v") ((builtins.stringLength pkgs.coreutils-full.version) - 1));

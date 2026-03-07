@@ -2,9 +2,9 @@
 
 # Enable niri (scrolling wayland compositor)
 # Note that my config is system-specific.
-# Example config can be found for my main machine: hosts/nix13/home/ty/files/.config/niri/config.kdl
-# The file is copied (not symlinked) in in hosts/nix13/home/ty/home.nix
-# On top of this I run noctalia-shell, configured in config/home/users/ty/packages/desktop/niri.nix
+# Example config can be found for my main machine: hosts/nix13/home/files/.config/niri/config.kdl
+# The file is copied (not symlinked) in in hosts/nix13/home/home.nix
+# On top of this I run noctalia-shell, configured in config/home/extras/desktop/niri.nix
 #
 # Start niri with dbus-run-session -- niri
 # (Run ./niri.sh in home dir)

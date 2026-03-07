@@ -1,7 +1,7 @@
 { pkgs, lib, ... }:
 
 # Common home-manager values across client and server machines for my user
-# Imported by /hosts/<...>/home/ty/home.nix 
+# Imported by /hosts/<...>/home/home.nix 
 
 {
 

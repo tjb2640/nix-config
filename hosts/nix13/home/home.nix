@@ -4,8 +4,8 @@
 {
 
   imports = [
-    ../../../../config/home/users/ty/base/desktop.nix
-    ../../../../config/home/users/ty/packages/desktop/niri.nix
+    ../../../config/home/base/desktop.nix
+    ../../../config/home/extras/niri.nix
   ];
 
   # Niri config is device-specific. Home manager when?

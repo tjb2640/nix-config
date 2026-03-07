@@ -45,7 +45,7 @@
             };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.ty = import ./hosts/nix13/home/ty/home.nix;
+            home-manager.users.ty = import ./hosts/nix13/home/home.nix;
           }
         ];
       };
@@ -70,7 +70,7 @@
             };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.ty = import ./hosts/nix14s/home/ty/home.nix;
+            home-manager.users.ty = import ./hosts/nix14s/home/home.nix;
           }
         ];
       };
@@ -94,7 +94,7 @@
             };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.ty = import ./hosts/yoga16/home/ty/home.nix;
+            home-manager.users.ty = import ./hosts/yoga16/home/home.nix;
           }
         ];
       };

@@ -35,7 +35,7 @@
     nvidiaSettings = true;
   };
   
-  # This was previously set to "pkgs.ollama-rocm" for amdgpu in /config/system/base/desktop.nix
+  # This was previously set to "pkgs.ollama-rocm" for amdgpu in /config/system/extras/ollama.nix
   services.ollama.package = lib.mkForce pkgs.ollama-cuda;
 
   # Wiki says this enables driver for Wayland

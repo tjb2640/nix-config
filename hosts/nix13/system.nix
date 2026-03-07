@@ -7,11 +7,11 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     ../../config/system/base/laptop.nix
-    ../../config/system/packages/desktop/niri.nix
-    ../../config/system/packages/firefox.nix
-    ../../config/system/packages/gaming.nix
-    ../../config/system/packages/idea.nix
-    ../../config/system/packages/uutils.nix
+    ../../config/system/extras/niri.nix
+    ../../config/system/extras/firefox.nix
+    ../../config/system/extras/gaming.nix
+    ../../config/system/extras/idea.nix
+    ../../config/system/extras/uutils.nix
   ];
 
   # No need to touch below
