@@ -9,10 +9,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     # noctalia-shell for niri compositor
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
@@ -29,7 +25,7 @@
 
   # Remember to include plasma-manager on Plasma systems:
   # home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
-  outputs = { self, nixpkgs, nixpkgs2511, home-manager, plasma-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs2511, home-manager, ... }@inputs: {
     nixosConfigurations = {
 
       # Thinkpad X13 gen 3 (AMD)
@@ -77,7 +73,6 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.ty = import ./hosts/nix14s/home/ty/home.nix;
-            home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
           }
         ];
       };

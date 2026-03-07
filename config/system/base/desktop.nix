@@ -87,17 +87,6 @@ in
   #   EXTRA PACKAGES
   # ###########################################################
 
-  services.ollama = {
-    enable = true;
-    loadModels = [ "deepseek-r1:1.5b" "dolphin3:8b" ];
-    package = lib.mkDefault pkgs.ollama-cpu; # packages/nvidia.nix will set this to "-cuda
-  };
-
-  services.open-webui = {
-    enable = true;
-    port = 8083;
-  };
-
   users.users.ty.packages = with pkgs; [
     apple-fonts
     ffmpeg
@@ -107,7 +96,6 @@ in
     libreoffice
     media-downloader # Qt yt-dlp
     mullvad-vpn
-    obsidian
     pear-desktop # (formerly youtube-music)
     plymouth-theme-rbsys
     qbittorrent
@@ -117,7 +105,6 @@ in
     strawberry # graphical music player
     telegram-desktop
     vlc
-    vscodium # de-microsofted vscode
     yt-dlp # youtube downloader
   ];
 
