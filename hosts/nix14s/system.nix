@@ -7,10 +7,12 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     ../../config/base/laptop.nix
-    ../../config/packages/desktop/plasma.nix
-    ../../config/packages/firefox.nix
-    ../../config/packages/gaming.nix
-    ../../config/packages/nvidia.nix
+    ../../config/system/packages/desktop/niri.nix
+    ../../config/system/packages/firefox.nix
+    ../../config/system/packages/gaming.nix
+    ../../config/system/packages/idea.nix
+    ../../config/system/packages/uutils.nix
+    ../../config/system/packages/nvidia.nix
   ];
 
   # System-specific NVidia options
