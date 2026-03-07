@@ -23,8 +23,6 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  # Remember to include plasma-manager on Plasma systems:
-  # home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
   outputs = { self, nixpkgs, nixpkgs2511, home-manager, ... }@inputs: {
     nixosConfigurations = {
 

@@ -13,7 +13,7 @@ Extra packages that might only be wanted on specific hosts can be imported from 
 - For reasons, I have replaced Firefox in daily usage with Zen Browser, which is configured in home manager and not at the system level. During the course of migration, I am keeping `firefox.nix` around so I can flip back into Firefox for whatever.
 - `gaming.nix` enables Steam and some extra packages like Proton.
 
-Inside `/config/system/packages/desktop` live configs for the Plasma desktop and the niri compositor. I use niri now and am keeping Plasma around just in case I need the config again.
+Inside `/config/system/packages/desktop` lives my declared niri config.
 
 ## home-manager config
 
