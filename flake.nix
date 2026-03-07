@@ -58,8 +58,14 @@
 
       # Thinkpad P14s (nvidia, intel :( )
       # This looks a lot like nix13 (above) but with additional nvidia stuff
-      nix14s = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+      nix14s = nixpkgs.lib.nixosSystem rec {
+        specialArgs = {
+          inherit inputs;
+          pkgs-2511 = import nixpkgs2511 {
+            system = system;
+            config.allowUnfree = true;
+          };
+        };
         system = "x86_64-linux";
         modules = [
           ./hosts/nix14s/system.nix
@@ -77,8 +83,14 @@
       };
 
       # Lenovo Yoga 16" (2024?)
-      yoga16 = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+      yoga16 = nixpkgs.lib.nixosSystem rec {
+        specialArgs = {
+          inherit inputs;
+          pkgs-2511 = import nixpkgs2511 {
+            system = system;
+            config.allowUnfree = true;
+          };
+        };
         system = "x86_64-linux";
         modules = [
           ./hosts/yoga16/system.nix

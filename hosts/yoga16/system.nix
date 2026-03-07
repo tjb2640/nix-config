@@ -10,6 +10,8 @@
     ../../config/system/packages/desktop/niri.nix
     ../../config/system/packages/firefox.nix
     ../../config/system/packages/gaming.nix
+    ../../config/system/packages/idea.nix
+    ../../config/system/packages/uutils.nix
     ../../config/system/packages/nvidia.nix # 4050 ti mobile
   ];
 

@@ -1,4 +1,4 @@
-# user: ty, system: nix13
+# user: ty, system: yoga16
 { ... }:
 
 {
@@ -12,7 +12,7 @@
   home.file.".config/niri/config.kdl".source = ./files/.config/niri/config.kdl;
 
   programs.zsh.shellAliases = {
-    rbs = "sudo nixos-rebuild switch --flake /home/ty/.dotfiles/#yoga16";
+    rbs = "sudo echo 'Rebuilding flake yoga16' && yes | sudo nixos-rebuild switch --flake /home/ty/.dotfiles/#yoga16";
   };
   
 }
