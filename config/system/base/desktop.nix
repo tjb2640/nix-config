@@ -108,15 +108,4 @@ in
     yt-dlp # youtube downloader
   ];
 
-  xdg.mime.defaultApplications = lib.mkForce {
-    "application/pdf" = "librewolf.desktop";
-    "text/html" = "librewolf.desktop";
-    "text/markdown" = "librewolf.desktop";
-    "text/x-markdown" = "librewolf.desktop";
-    "x-scheme-handler/about" = "librewolf.desktop";
-    "x-scheme-handler/http" = "librewolf.desktop";
-    "x-scheme-handler/https" = "librewolf.desktop";
-    "x-scheme-handler/unknown" = "librewolf.desktop";
-  };
-
 }

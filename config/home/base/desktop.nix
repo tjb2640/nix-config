@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 # home-manager config for desktop machines. Mostly graphical applications
 
@@ -98,4 +98,27 @@
     };
   };
 
+  # https://discourse.nixos.org/t/home-manager-and-the-mimeapps-list-file-on-plasma-kde-desktops/37694/7
+  xdg.mimeApps.enable = lib.mkDefault true;
+
+  programs.newsboat = {
+    enable = true;
+    autoFetchArticles.enable = true;
+    autoVacuum.enable = true;
+    urls = [
+      {
+        tags = [ "cbc" "ca" ];
+        url = "https://www.cbc.ca/webfeed/rss/rss-canada";
+      }
+      {
+        tags = [ "cbc" "ca" "world" ];
+        url = "https://www.cbc.ca/webfeed/rss/rss-world";
+      }
+      {
+        tags = [ "cbc" "ca" "toronto" ];
+        url = "https://www.cbc.ca/webfeed/rss/rss-canada-toronto";
+      }
+    ];
+  };
+  
 }
