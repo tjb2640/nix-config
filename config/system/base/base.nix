@@ -89,6 +89,7 @@
 
   programs.zsh.enable = true;
 
+  # Enables sudo-rs (rust rewrite of sudo)
   security = {
     sudo.enable = false;
     sudo-rs = {
@@ -99,7 +100,7 @@
   };
 
   # ###########################################################
-  #   ACCOUNTS
+  #   ACCOUNT
   # ###########################################################
 
   # Main user account

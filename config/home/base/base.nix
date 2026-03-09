@@ -8,45 +8,27 @@
   home.username = "ty";
   home.file.".config/macchina/themes/Rbsys.toml".source = ../files/.config/macchina/themes/Rbsys.toml;
   home.file.".config/macchina/macchina.toml".source = ../files/.config/macchina/macchina.toml;
-  home.file."unfck-store.sh".source = ../files/unfck-store.sh;
   home.homeDirectory = "/home/ty";
   home.packages = with pkgs; [
     macchina
     mullvad # command line tools for mullvad vpn
   ];
+
   home.sessionVariables = {
     EDITOR = "hx";
   };
 
-  # Hi, be sure to change this as well... lol
+  # cmus - terminal music player
+  programs.cmus = {
+    enable = true;
+    theme = "jellybeans";
+  };
+
   programs.git = {
     enable = true;
     settings = {
       user.email = "95368581+tjb2640@users.noreply.github.com";
       user.name = "tjb2640";
-    };
-  };
-
-  programs.fastfetch = {
-    enable = true;
-    settings = {
-      modules = [
-        "title"
-        "separator"
-        "os"
-        "de"
-        "wm"
-        "separator"
-        "host"
-        "cpu"
-        "gpu"
-        "memory"
-        "display"
-        "disk"
-        "shell"
-        "separator"
-        "colors"
-      ];
     };
   };
 
@@ -77,22 +59,7 @@
     };
   };
 
-  # This appears to be the minimum possible config for hyfetch settings
-  programs.hyfetch = {
-    enable = true;
-    settings = {
-      backend = "fastfetch";
-      color_align = {
-        mode = "horizontal";
-      };
-      light_dark = "dark";
-      lightness = 0.25;
-      mode = "rgb";
-      preset = "nonbinary";
-      pride_month_disable = false;
-    };
-  };
-
+  # zsh prompt customization
   programs.starship = {
     enable = true;
     enableZshIntegration = true;

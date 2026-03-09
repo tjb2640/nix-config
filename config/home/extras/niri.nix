@@ -11,7 +11,7 @@
   # noctalia does wallpapers in a different file:
   home.file.".cache/noctalia/wallpapers.json" = {
     text = builtins.toJSON {
-      defaultWallpaper = "/home/ty/.dotfiles/resource/wallpapers/36claremont.jpg";
+      defaultWallpaper = "/home/ty/.dotfiles/resource/wallpapers/baum.jpg";
     };
   };
 

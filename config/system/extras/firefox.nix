@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 # Home manager default settings for Firefox
 # Will result in a message in the settings about a managed browser
@@ -36,7 +36,7 @@
     };
   };
 
-  xdg.mime.defaultApplications = {
+  xdg.mime.defaultApplications = lib.mkDefault {
     "application/pdf" = "firefox.desktop";
     "text/html" = "firefox.desktop";
     "text/markdown" = "firefox.desktop";

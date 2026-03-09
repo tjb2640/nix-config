@@ -8,8 +8,8 @@
     (modulesPath + "/installer/scan/not-detected.nix")
     ../../config/system/base/laptop.nix
     ../../config/system/extras/niri.nix
-    ../../config/system/extras/firefox.nix
     ../../config/system/extras/gaming.nix
+    ../../config/system/extras/firefox.nix
     ../../config/system/extras/idea.nix
     ../../config/system/extras/uutils.nix
   ];
